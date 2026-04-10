@@ -29,7 +29,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
         
-        body { font-family: 'Times New Roman', Times, serif; }
+        body { font-family: 'Times New Roman', Times, serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
         .font-sans { font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
 
@@ -44,7 +44,7 @@
         }
 
         .phone-shadow {
-            box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.35), 0 30px 60px -30px rgba(0, 0, 0, 0.45);
+            box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.4), 0 20px 40px -20px rgba(0, 0, 0, 0.5);
         }
         
         .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -89,38 +89,38 @@
                     id: 'dashboard',
                     title: 'Live Dashboard',
                     content: (
-                        <div key="dashboard" className="flex flex-col h-full phone-screen-slide-up pb-20">
-                            <div className="px-5 pb-10 pt-12 bg-[#008B99] text-white rounded-b-[3.5rem] relative overflow-hidden shadow-lg">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+                        <div key="dashboard" className="flex flex-col h-full phone-screen-slide-up pb-16">
+                            <div className="px-5 pb-8 pt-12 bg-[#008B99] text-white rounded-b-[2.5rem] relative overflow-hidden shadow-lg">
+                                <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-10 -mt-10 blur-2xl"></div>
                                 <div className="relative z-10 flex justify-between items-start">
                                     <div>
-                                        <p className="text-xs text-teal-100 font-black tracking-widest opacity-90 uppercase">Welcome back,</p>
-                                        <h4 className="text-2xl font-bold mt-1 leading-tight tracking-tight">Mama Aline</h4>
+                                        <p className="text-[10px] text-teal-100 font-black tracking-widest opacity-90 uppercase">Welcome back,</p>
+                                        <h4 className="text-xl font-bold mt-1 leading-tight tracking-tight">Mama Aline</h4>
                                     </div>
-                                    <div className="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center border border-white/30 backdrop-blur-md shadow-sm">
-                                        <i className="fas fa-user text-white text-lg"></i>
+                                    <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center border border-white/30 backdrop-blur-md shadow-sm">
+                                        <i className="fas fa-user text-white text-sm"></i>
                                     </div>
                                 </div>
                             </div>
-                            <div className="px-5 py-4 -mt-8 z-20 space-y-4">
-                                <div className="bg-white rounded-[2.5rem] shadow-[0_15px_50px_rgba(0,0,0,0.08)] border border-slate-50 p-6 flex justify-between items-center">
+                            <div className="px-4 py-4 -mt-6 z-20 space-y-3">
+                                <div className="bg-white rounded-[2rem] shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-slate-50 p-5 flex justify-between items-center">
                                     <div>
-                                        <p className="text-[11px] text-slate-400 font-black uppercase tracking-[0.2em] mb-1">Gestational Age</p>
-                                        <p className="text-4xl font-black text-[#008B99]">24 <span className="text-base font-bold text-slate-400">Weeks</span></p>
+                                        <p className="text-[9px] text-slate-400 font-black uppercase tracking-[0.2em] mb-1">Gestational Age</p>
+                                        <p className="text-3xl font-black text-[#008B99]">24 <span className="text-xs font-bold text-slate-400">Weeks</span></p>
                                     </div>
-                                    <div className="w-14 h-14 rounded-[1.8rem] bg-teal-50 flex items-center justify-center text-[#008B99] shadow-inner">
-                                        <i className="fas fa-baby text-3xl"></i>
+                                    <div className="w-12 h-12 rounded-[1.2rem] bg-teal-50 flex items-center justify-center text-[#008B99] shadow-inner">
+                                        <i className="fas fa-baby text-2xl"></i>
                                     </div>
                                 </div>
-                                <div className="bg-white rounded-[2.5rem] shadow-[0_15px_50px_rgba(0,0,0,0.08)] border border-slate-50 p-5">
+                                <div className="bg-white rounded-[2rem] shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-slate-50 p-4">
                                     <div className="flex items-center gap-3 mb-3">
-                                        <div className="w-8 h-8 rounded-xl bg-blue-50 flex items-center justify-center text-xs text-[#2962FF]">
+                                        <div className="w-7 h-7 rounded-lg bg-blue-50 flex items-center justify-center text-[10px] text-[#2962FF]">
                                             <i className="fas fa-calendar-check"></i>
                                         </div>
-                                        <p className="text-[11px] font-black text-slate-400 uppercase tracking-widest">Upcoming Checkup</p>
+                                        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Upcoming Checkup</p>
                                     </div>
-                                    <p className="text-lg font-black text-slate-800">ANC 3 (26 Weeks)</p>
-                                    <p className="text-xs text-slate-500 font-bold mt-2 flex items-center gap-2">
+                                    <p className="text-base font-black text-slate-800">ANC 3 (26 Weeks)</p>
+                                    <p className="text-[10px] text-slate-500 font-bold mt-1.5 flex items-center gap-2">
                                         <i className="fas fa-hospital-user text-[#2962FF]"></i> Oct 12 • Butaro Hospital
                                     </p>
                                 </div>
@@ -132,24 +132,25 @@
                     id: 'schedule',
                     title: 'Care Timeline',
                     content: (
-                        <div key="schedule" className="flex flex-col h-full phone-screen-slide-up pb-20">
-                            <div className="px-6 pb-8 pt-12 bg-[#2962FF] text-white rounded-b-[3.5rem] shadow-lg">
-                                <h4 className="text-2xl font-bold tracking-tight">Your Timeline</h4>
-                                <p className="text-xs opacity-80 mt-1 font-black uppercase tracking-[0.3em]">8 WHO Visits</p>
+                        <div key="schedule" className="flex flex-col h-full phone-screen-slide-up pb-16">
+                            <div className="px-5 pb-6 pt-12 bg-[#2962FF] text-white rounded-b-[2.5rem] shadow-lg">
+                                <h4 className="text-xl font-bold tracking-tight">Your Timeline</h4>
+                                <p className="text-[10px] opacity-80 mt-1 font-black uppercase tracking-[0.3em]">8 WHO Visits</p>
                             </div>
-                            <div className="flex-1 px-5 py-6 space-y-4 no-scrollbar overflow-y-auto">
+                            <div className="flex-1 px-4 py-5 space-y-3 no-scrollbar overflow-y-auto">
                                 {[
                                     { wk: 12, label: 'ANC 1 (12 Wks)', status: 'done' },
                                     { wk: 20, label: 'ANC 2 (20 Wks)', status: 'done' },
-                                    { wk: 26, label: 'ANC 3 (26 Wks)', status: 'next' }
+                                    { wk: 26, label: 'ANC 3 (26 Wks)', status: 'next' },
+                                    { wk: 30, label: 'ANC 4 (30 Wks)', status: 'pending' }
                                 ].map((item, i) => (
-                                    <div key={i} className={`flex items-center gap-5 p-4 rounded-[2rem] border transition-all ${item.status === 'next' ? 'bg-blue-50 border-blue-200 ring-4 ring-blue-50/50' : 'bg-white border-slate-100'}`}>
-                                        <div className={`w-10 h-10 rounded-2xl flex items-center justify-center text-sm ${item.status === 'done' ? 'bg-teal-500 text-white' : 'bg-[#2962FF] text-white animate-pulse shadow-lg shadow-blue-200'}`}>
+                                    <div key={i} className={`flex items-center gap-4 p-3.5 rounded-[1.5rem] border transition-all ${item.status === 'next' ? 'bg-blue-50 border-blue-200 ring-2 ring-blue-50/50' : 'bg-white border-slate-100'}`}>
+                                        <div className={`w-9 h-9 rounded-[1rem] flex items-center justify-center text-xs ${item.status === 'done' ? 'bg-teal-500 text-white' : item.status === 'next' ? 'bg-[#2962FF] text-white animate-pulse shadow-md shadow-blue-200' : 'bg-slate-100 text-slate-400'}`}>
                                             {item.status === 'done' ? <i className="fas fa-check"></i> : <span className="font-black">{i+1}</span>}
                                         </div>
                                         <div>
-                                            <p className="text-sm font-black text-slate-800">{item.label}</p>
-                                            <p className="text-xs font-bold text-slate-400 mt-1">{item.status === 'next' ? 'Scheduled: Oct 12' : 'Completed at Clinic'}</p>
+                                            <p className="text-[13px] font-black text-slate-800">{item.label}</p>
+                                            <p className="text-[10px] font-bold text-slate-400 mt-0.5">{item.status === 'next' ? 'Scheduled: Oct 12' : item.status === 'done' ? 'Completed at Clinic' : 'Upcoming'}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -161,24 +162,24 @@
                     id: 'mama-ai',
                     title: 'Mama AI Support',
                     content: (
-                        <div key="mama-ai" className="flex flex-col h-full phone-screen-slide-up pb-20">
-                            <div className="px-6 pb-6 pt-12 bg-indigo-600 text-white rounded-b-[3.5rem] flex items-center gap-5 shadow-lg">
-                                <div className="w-14 h-14 bg-white/20 rounded-[1.5rem] flex items-center justify-center backdrop-blur-md border border-white/20">
-                                    <i className="fas fa-brain text-xl"></i>
+                        <div key="mama-ai" className="flex flex-col h-full phone-screen-slide-up pb-16">
+                            <div className="px-5 pb-5 pt-12 bg-indigo-600 text-white rounded-b-[2.5rem] flex items-center gap-4 shadow-lg">
+                                <div className="w-12 h-12 bg-white/20 rounded-[1.2rem] flex items-center justify-center backdrop-blur-md border border-white/20">
+                                    <i className="fas fa-brain text-lg"></i>
                                 </div>
                                 <div>
-                                    <h4 className="text-2xl font-bold tracking-tight">Mama AI</h4>
-                                    <p className="text-xs text-indigo-100 font-black uppercase tracking-widest">Medical Assistant</p>
+                                    <h4 className="text-xl font-bold tracking-tight">Mama AI</h4>
+                                    <p className="text-[10px] text-indigo-100 font-black uppercase tracking-widest">Medical Assistant</p>
                                 </div>
                             </div>
-                            <div className="flex-1 p-5 space-y-4">
-                                <div className="bg-slate-100 p-4 rounded-[1.8rem] rounded-tl-none text-[13px] leading-relaxed text-slate-700 max-w-[90%] font-medium">
+                            <div className="flex-1 p-4 space-y-3">
+                                <div className="bg-slate-100 p-3.5 rounded-[1.5rem] rounded-tl-none text-xs leading-relaxed text-slate-700 max-w-[90%] font-medium">
                                     Muraho Mama! It is normal to feel tired at 24 weeks. Are you eating enough iron-rich foods?
                                 </div>
-                                <div className="bg-indigo-600 p-4 rounded-[1.8rem] rounded-tr-none text-[13px] leading-relaxed text-white max-w-[85%] ml-auto font-bold shadow-xl shadow-indigo-100">
+                                <div className="bg-indigo-600 p-3.5 rounded-[1.5rem] rounded-tr-none text-xs leading-relaxed text-white max-w-[85%] ml-auto font-bold shadow-md shadow-indigo-100">
                                     Yes, I have been eating beans. What else do you recommend?
                                 </div>
-                                <div className="bg-white border border-slate-100 p-4 rounded-[1.8rem] rounded-tl-none text-[13px] leading-relaxed text-slate-700 max-w-[90%] font-medium shadow-sm">
+                                <div className="bg-white border border-slate-100 p-3.5 rounded-[1.5rem] rounded-tl-none text-xs leading-relaxed text-slate-700 max-w-[90%] font-medium shadow-sm">
                                     Dodo and small fish (Sambaza) are also great!
                                 </div>
                             </div>
@@ -190,65 +191,72 @@
             useEffect(() => {
                 const timer = setInterval(() => {
                     setActiveScreen(prev => (prev + 1) % screens.length);
-                }, 14000); // 10s stay active + 4s transition
+                }, 12000); // 8s stay active + 4s transition
                 return () => clearInterval(timer);
             }, []);
 
             return (
-                <div className="relative group cursor-default">
-                    <div className="absolute inset-0 bg-teal-400/20 blur-[120px] rounded-full scale-90 transition-opacity opacity-0 group-hover:opacity-100 duration-1000"></div>
+                <div className="relative group cursor-default flex flex-col items-center">
+                    <div className="absolute inset-0 bg-teal-400/20 blur-[100px] rounded-full scale-90 transition-opacity opacity-0 group-hover:opacity-100 duration-1000"></div>
                     
-                    <div className="relative w-[320px] h-[550px] bg-slate-900 rounded-[4.5rem] border-[14px] border-slate-950 shadow-2xl overflow-hidden font-sans phone-shadow z-10">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-8 bg-slate-950 z-50 rounded-b-[2rem] flex items-center justify-center">
-                            <div className="w-14 h-1.5 bg-slate-800 rounded-full"></div>
+                    {/* Natively smaller dimensions: 280x580 to prevent subpixel blurring completely */}
+                    <div className="relative w-[280px] h-[580px] bg-slate-900 rounded-[3.5rem] border-[12px] border-slate-950 shadow-2xl overflow-hidden font-sans phone-shadow z-10">
+                        
+                        {/* Notch */}
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-36 h-7 bg-slate-950 z-50 rounded-b-[1.5rem] flex items-center justify-center">
+                            <div className="w-12 h-1 bg-slate-800 rounded-full"></div>
                         </div>
 
-                        <div className="absolute top-0 w-full px-10 pt-3 flex justify-between items-center text-[11px] text-white/50 z-40 font-black tracking-tighter">
+                        {/* Status Bar */}
+                        <div className="absolute top-0 w-full px-8 pt-3 flex justify-between items-center text-[10px] text-white/50 z-40 font-black tracking-tighter">
                             <span>9:41</span>
-                            <div className="flex gap-2 items-center">
+                            <div className="flex gap-1.5 items-center">
                                 <i className="fas fa-signal"></i>
-                                <i className="fas fa-wifi text-[10px]"></i>
-                                <i className="fas fa-battery-full"></i>
+                                <i className="fas fa-wifi text-[8px]"></i>
+                                <i className="fas fa-battery-full text-[10px]"></i>
                             </div>
                         </div>
 
+                        {/* Content Area */}
                         <div className="h-full w-full bg-slate-50 relative overflow-hidden">
                             {screens[activeScreen].content}
 
-                            <div className="absolute bottom-0 w-full bg-white/95 backdrop-blur-2xl border-t border-slate-100 pt-3 pb-6 px-5 flex justify-between items-center z-50 shadow-[0_-15px_40px_rgba(0,0,0,0.03)]">
-                                <div className={`flex flex-col items-center flex-1 transition-all duration-700 ${activeScreen === 0 ? 'text-[#008B99] scale-110' : 'text-slate-300'}`}>
-                                    <i className="fas fa-house-chimney text-xl mb-1"></i>
-                                    <span className="text-[10px] font-black uppercase tracking-[0.1em]">Home</span>
+                            {/* Bottom Nav Bar */}
+                            <div className="absolute bottom-0 w-full bg-white/95 backdrop-blur-xl border-t border-slate-100 pt-3 pb-6 px-5 flex justify-between items-center z-50 shadow-[0_-15px_30px_rgba(0,0,0,0.03)]">
+                                <div className={`flex flex-col items-center flex-1 transition-all duration-700 ${activeScreen === 0 ? 'text-[#008B99]' : 'text-slate-300'}`}>
+                                    <i className="fas fa-house-chimney text-[17px] mb-1"></i>
+                                    <span className="text-[9px] font-black uppercase tracking-[0.1em]">Home</span>
                                 </div>
-                                <div className={`flex flex-col items-center flex-1 transition-all duration-700 ${activeScreen === 1 ? 'text-[#2962FF] scale-110' : 'text-slate-300'}`}>
-                                    <i className="fas fa-calendar-day text-xl mb-1"></i>
-                                    <span className="text-[10px] font-black uppercase tracking-[0.1em]">Visits</span>
+                                <div className={`flex flex-col items-center flex-1 transition-all duration-700 ${activeScreen === 1 ? 'text-[#2962FF]' : 'text-slate-300'}`}>
+                                    <i className="fas fa-calendar-day text-[17px] mb-1"></i>
+                                    <span className="text-[9px] font-black uppercase tracking-[0.1em]">Visits</span>
                                 </div>
-                                <div className={`flex flex-col items-center flex-1 transition-all duration-700 ${activeScreen === 2 ? 'text-indigo-600 scale-110' : 'text-slate-300'}`}>
-                                    <i className="fas fa-message-sparkles text-xl mb-1"></i>
-                                    <span className="text-[10px] font-black uppercase tracking-[0.1em]">AI Hub</span>
+                                <div className={`flex flex-col items-center flex-1 transition-all duration-700 ${activeScreen === 2 ? 'text-indigo-600' : 'text-slate-300'}`}>
+                                    <i className="fas fa-message-sparkles text-[17px] mb-1"></i>
+                                    <span className="text-[9px] font-black uppercase tracking-[0.1em]">AI Hub</span>
                                 </div>
                                 <div className="flex flex-col items-center flex-1">
-                                    <div className="w-12 h-12 rounded-2xl bg-red-500 text-white flex items-center justify-center shadow-xl shadow-red-200 border-2 border-white">
-                                        <i className="fas fa-phone-flip text-base"></i>
+                                    <div className="w-10 h-10 rounded-[0.8rem] bg-red-500 text-white flex items-center justify-center shadow-lg shadow-red-200">
+                                        <i className="fas fa-phone-flip text-[13px]"></i>
                                     </div>
-                                    <span className="text-[10px] font-black text-red-500 mt-1 uppercase tracking-[0.1em]">SOS</span>
+                                    <span className="text-[9px] font-black text-red-500 mt-1 uppercase tracking-[0.1em]">SOS</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="mt-10 flex flex-col items-center">
-                        <div className="flex gap-4">
+                    {/* Progress Indicator */}
+                    <div className="mt-8 flex flex-col items-center">
+                        <div className="flex gap-3">
                             {screens.map((_, i) => (
                                 <div 
                                     key={i} 
                                     onClick={() => setActiveScreen(i)}
-                                    className={`h-2 cursor-pointer rounded-full transition-all duration-1000 ${activeScreen === i ? 'w-12 bg-teal-500 shadow-md shadow-teal-100' : 'w-2 bg-slate-200'}`}
+                                    className={`h-1.5 cursor-pointer rounded-full transition-all duration-1000 ${activeScreen === i ? 'w-10 bg-teal-500 shadow-sm shadow-teal-100' : 'w-2 bg-slate-200'}`}
                                 ></div>
                             ))}
                         </div>
-                        <p className="mt-5 text-[11px] font-black text-slate-400 uppercase tracking-[0.4em] animate-pulse">Now Previewing {screens[activeScreen].title}</p>
+                        <p className="mt-4 text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] animate-pulse">Previewing {screens[activeScreen].title}</p>
                     </div>
                 </div>
             );
@@ -345,7 +353,7 @@
                 </div>
               </section>
 
-              {/* SECTION 3: INNOVATIONS (MATERNIX & ONCOLOGY) - RESTORED TITLE AND ONCOLOGY SECTION */}
+              {/* SECTION 3: INNOVATIONS (MATERNIX & ONCOLOGY) */}
               <section id="innovations" className="py-20 px-6 lg:px-8 max-w-7xl mx-auto bg-slate-50/50 rounded-[4rem] mb-20 border border-slate-100 font-sans">
                 <div className="max-w-6xl mx-auto mb-12">
                   <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Digital Innovations</h2>
@@ -366,7 +374,7 @@
                         </p>
                       </div>
                         
-                      <div className="space-y-6">
+                      <div className="space-y-4">
                           {[
                               "Automated Antenatal Care (ANC) scheduling.",
                               "Danger Sign Triage reporting.",
@@ -374,26 +382,27 @@
                               "\"Mama AI\" Chatbot for localized health education."
                           ].map((label, idx) => (
                               <div key={idx} className="flex gap-4 items-center group">
-                                  <div className="w-8 h-8 shrink-0 rounded-full bg-[#00E5FF] flex items-center justify-center text-white text-xs shadow-sm group-hover:scale-110 transition-all">
+                                  <div className="w-6 h-6 shrink-0 rounded-full bg-[#00E5FF] flex items-center justify-center text-white text-[10px] shadow-sm group-hover:scale-110 transition-all">
                                       <i className="fas fa-check"></i>
                                   </div>
-                                  <p className="text-lg font-medium text-slate-700">{label}</p>
+                                  <p className="text-sm font-medium text-slate-700">{label}</p>
                               </div>
                           ))}
                       </div>
 
-                      <div className="pt-8">
-                        <button className="px-10 py-4 bg-slate-900 text-white font-black text-[11px] rounded-[1.2rem] uppercase tracking-widest hover:bg-slate-800 transition-all shadow-2xl active:scale-95">
+                      <div className="pt-6">
+                        <button className="px-8 py-4 bg-slate-900 text-white font-black text-xs rounded-[1.2rem] uppercase tracking-widest hover:bg-slate-800 transition-all shadow-2xl active:scale-95">
                           View Case Study
                         </button>
                       </div>
                     </div>
-                    <div className="flex justify-center lg:justify-end relative">
+                    
+                    <div className="flex justify-center lg:justify-end relative items-center">
                         <MaternixPhone />
                     </div>
                   </div>
 
-                  {/* PROJECT 2: ONCOLOGY PIPELINE (RESTORED) */}
+                  {/* PROJECT 2: ONCOLOGY PIPELINE */}
                   <div className="max-w-6xl mx-auto mt-20 bg-white border border-slate-200 rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#2962FF]/5 rounded-full mix-blend-multiply filter blur-[80px]"></div>
                     
@@ -414,7 +423,7 @@
                   </div>
               </section>
 
-              {/* SECTION 4: LEADERSHIP (EXACT SCREENSHOT BOLDING PRESERVED, REDUCED FONT) */}
+              {/* SECTION 4: LEADERSHIP */}
               <section id="leadership" className="py-24 px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200">
                 <div className="flex flex-col md:flex-row gap-12 items-center">
                   <div className="w-full md:w-1/3 flex justify-center md:justify-start">
