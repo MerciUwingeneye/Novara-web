@@ -89,38 +89,38 @@
                     id: 'dashboard',
                     title: 'Live Dashboard',
                     content: (
-                        <div key="dashboard" className="flex flex-col h-full phone-screen-slide-up pb-24">
-                            <div className="px-5 pb-12 pt-14 bg-[#008B99] text-white rounded-b-[3.5rem] relative overflow-hidden shadow-lg">
+                        <div key="dashboard" className="flex flex-col h-full phone-screen-slide-up pb-20">
+                            <div className="px-5 pb-10 pt-12 bg-[#008B99] text-white rounded-b-[3.5rem] relative overflow-hidden shadow-lg">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
                                 <div className="relative z-10 flex justify-between items-start">
                                     <div>
-                                        <p className="text-[10px] text-teal-100 font-black tracking-widest opacity-90 uppercase">Welcome back,</p>
-                                        <h4 className="text-xl font-bold mt-1 leading-tight tracking-tight">Mama Aline</h4>
+                                        <p className="text-xs text-teal-100 font-black tracking-widest opacity-90 uppercase">Welcome back,</p>
+                                        <h4 className="text-2xl font-bold mt-1 leading-tight tracking-tight">Mama Aline</h4>
                                     </div>
-                                    <div className="w-10 h-10 bg-white/20 rounded-2xl flex items-center justify-center border border-white/30 backdrop-blur-md shadow-sm">
-                                        <i className="fas fa-user text-white text-sm"></i>
+                                    <div className="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center border border-white/30 backdrop-blur-md shadow-sm">
+                                        <i className="fas fa-user text-white text-lg"></i>
                                     </div>
                                 </div>
                             </div>
-                            <div className="px-5 py-4 -mt-10 z-20 space-y-4">
-                                <div className="bg-white rounded-[2.5rem] shadow-[0_15px_50px_rgba(0,0,0,0.08)] border border-slate-50 p-7 flex justify-between items-center">
+                            <div className="px-5 py-4 -mt-8 z-20 space-y-4">
+                                <div className="bg-white rounded-[2.5rem] shadow-[0_15px_50px_rgba(0,0,0,0.08)] border border-slate-50 p-6 flex justify-between items-center">
                                     <div>
-                                        <p className="text-[9px] text-slate-400 font-black uppercase tracking-[0.2em] mb-1">Gestational Age</p>
-                                        <p className="text-3xl font-black text-[#008B99]">24 <span className="text-sm font-bold text-slate-400">Weeks</span></p>
+                                        <p className="text-[11px] text-slate-400 font-black uppercase tracking-[0.2em] mb-1">Gestational Age</p>
+                                        <p className="text-4xl font-black text-[#008B99]">24 <span className="text-base font-bold text-slate-400">Weeks</span></p>
                                     </div>
                                     <div className="w-14 h-14 rounded-[1.8rem] bg-teal-50 flex items-center justify-center text-[#008B99] shadow-inner">
-                                        <i className="fas fa-baby text-2xl"></i>
+                                        <i className="fas fa-baby text-3xl"></i>
                                     </div>
                                 </div>
                                 <div className="bg-white rounded-[2.5rem] shadow-[0_15px_50px_rgba(0,0,0,0.08)] border border-slate-50 p-5">
                                     <div className="flex items-center gap-3 mb-3">
-                                        <div className="w-7 h-7 rounded-xl bg-blue-50 flex items-center justify-center text-[10px] text-[#2962FF]">
+                                        <div className="w-8 h-8 rounded-xl bg-blue-50 flex items-center justify-center text-xs text-[#2962FF]">
                                             <i className="fas fa-calendar-check"></i>
                                         </div>
-                                        <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Upcoming Checkup</p>
+                                        <p className="text-[11px] font-black text-slate-400 uppercase tracking-widest">Upcoming Checkup</p>
                                     </div>
-                                    <p className="text-sm font-black text-slate-800">ANC 3 (26 Weeks)</p>
-                                    <p className="text-[10px] text-slate-500 font-bold mt-2 flex items-center gap-2">
+                                    <p className="text-lg font-black text-slate-800">ANC 3 (26 Weeks)</p>
+                                    <p className="text-xs text-slate-500 font-bold mt-2 flex items-center gap-2">
                                         <i className="fas fa-hospital-user text-[#2962FF]"></i> Oct 12 • Butaro Hospital
                                     </p>
                                 </div>
@@ -132,24 +132,24 @@
                     id: 'schedule',
                     title: 'Care Timeline',
                     content: (
-                        <div key="schedule" className="flex flex-col h-full phone-screen-slide-up pb-24">
-                            <div className="px-6 pb-10 pt-14 bg-[#2962FF] text-white rounded-b-[3.5rem] shadow-lg">
-                                <h4 className="text-xl font-bold tracking-tight">Your Timeline</h4>
-                                <p className="text-[9px] opacity-80 mt-1 font-black uppercase tracking-[0.3em]">8 WHO Contacts</p>
+                        <div key="schedule" className="flex flex-col h-full phone-screen-slide-up pb-20">
+                            <div className="px-6 pb-8 pt-12 bg-[#2962FF] text-white rounded-b-[3.5rem] shadow-lg">
+                                <h4 className="text-2xl font-bold tracking-tight">Your Timeline</h4>
+                                <p className="text-xs opacity-80 mt-1 font-black uppercase tracking-[0.3em]">8 WHO Visits</p>
                             </div>
-                            <div className="flex-1 px-5 py-8 space-y-5 no-scrollbar overflow-y-auto">
+                            <div className="flex-1 px-5 py-6 space-y-4 no-scrollbar overflow-y-auto">
                                 {[
                                     { wk: 12, label: 'ANC 1 (12 Wks)', status: 'done' },
                                     { wk: 20, label: 'ANC 2 (20 Wks)', status: 'done' },
                                     { wk: 26, label: 'ANC 3 (26 Wks)', status: 'next' }
                                 ].map((item, i) => (
                                     <div key={i} className={`flex items-center gap-5 p-4 rounded-[2rem] border transition-all ${item.status === 'next' ? 'bg-blue-50 border-blue-200 ring-4 ring-blue-50/50' : 'bg-white border-slate-100'}`}>
-                                        <div className={`w-9 h-9 rounded-2xl flex items-center justify-center text-xs ${item.status === 'done' ? 'bg-teal-500 text-white' : 'bg-[#2962FF] text-white animate-pulse shadow-lg shadow-blue-200'}`}>
+                                        <div className={`w-10 h-10 rounded-2xl flex items-center justify-center text-sm ${item.status === 'done' ? 'bg-teal-500 text-white' : 'bg-[#2962FF] text-white animate-pulse shadow-lg shadow-blue-200'}`}>
                                             {item.status === 'done' ? <i className="fas fa-check"></i> : <span className="font-black">{i+1}</span>}
                                         </div>
                                         <div>
-                                            <p className="text-xs font-black text-slate-800">{item.label}</p>
-                                            <p className="text-[9px] font-bold text-slate-400 mt-1">{item.status === 'next' ? 'Scheduled: Oct 12' : 'Completed at Clinic'}</p>
+                                            <p className="text-sm font-black text-slate-800">{item.label}</p>
+                                            <p className="text-xs font-bold text-slate-400 mt-1">{item.status === 'next' ? 'Scheduled: Oct 12' : 'Completed at Clinic'}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -161,24 +161,24 @@
                     id: 'mama-ai',
                     title: 'Mama AI Support',
                     content: (
-                        <div key="mama-ai" className="flex flex-col h-full phone-screen-slide-up pb-24">
-                            <div className="px-6 pb-8 pt-14 bg-indigo-600 text-white rounded-b-[3.5rem] flex items-center gap-5 shadow-lg">
-                                <div className="w-12 h-12 bg-white/20 rounded-[1.5rem] flex items-center justify-center backdrop-blur-md border border-white/20">
-                                    <i className="fas fa-brain text-lg"></i>
+                        <div key="mama-ai" className="flex flex-col h-full phone-screen-slide-up pb-20">
+                            <div className="px-6 pb-6 pt-12 bg-indigo-600 text-white rounded-b-[3.5rem] flex items-center gap-5 shadow-lg">
+                                <div className="w-14 h-14 bg-white/20 rounded-[1.5rem] flex items-center justify-center backdrop-blur-md border border-white/20">
+                                    <i className="fas fa-brain text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold tracking-tight">Mama AI</h4>
-                                    <p className="text-[9px] text-indigo-100 font-black uppercase tracking-widest">Medical Assistant</p>
+                                    <h4 className="text-2xl font-bold tracking-tight">Mama AI</h4>
+                                    <p className="text-xs text-indigo-100 font-black uppercase tracking-widest">Medical Assistant</p>
                                 </div>
                             </div>
-                            <div className="flex-1 p-6 space-y-5">
-                                <div className="bg-slate-100 p-4 rounded-[1.8rem] rounded-tl-none text-[11px] leading-relaxed text-slate-700 max-w-[90%] font-medium">
+                            <div className="flex-1 p-5 space-y-4">
+                                <div className="bg-slate-100 p-4 rounded-[1.8rem] rounded-tl-none text-[13px] leading-relaxed text-slate-700 max-w-[90%] font-medium">
                                     Muraho Mama! It is normal to feel tired at 24 weeks. Are you eating enough iron-rich foods?
                                 </div>
-                                <div className="bg-indigo-600 p-4 rounded-[1.8rem] rounded-tr-none text-[11px] leading-relaxed text-white max-w-[85%] ml-auto font-bold shadow-xl shadow-indigo-100">
+                                <div className="bg-indigo-600 p-4 rounded-[1.8rem] rounded-tr-none text-[13px] leading-relaxed text-white max-w-[85%] ml-auto font-bold shadow-xl shadow-indigo-100">
                                     Yes, I have been eating beans. What else do you recommend?
                                 </div>
-                                <div className="bg-white border border-slate-100 p-4 rounded-[1.8rem] rounded-tl-none text-[11px] leading-relaxed text-slate-700 max-w-[90%] font-medium shadow-sm">
+                                <div className="bg-white border border-slate-100 p-4 rounded-[1.8rem] rounded-tl-none text-[13px] leading-relaxed text-slate-700 max-w-[90%] font-medium shadow-sm">
                                     Dodo and small fish (Sambaza) are also great!
                                 </div>
                             </div>
@@ -198,16 +198,16 @@
                 <div className="relative group cursor-default">
                     <div className="absolute inset-0 bg-teal-400/20 blur-[120px] rounded-full scale-90 transition-opacity opacity-0 group-hover:opacity-100 duration-1000"></div>
                     
-                    <div className="relative w-[320px] h-[660px] bg-slate-900 rounded-[4.5rem] border-[14px] border-slate-950 shadow-2xl overflow-hidden font-sans phone-shadow z-10">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-44 h-9 bg-slate-950 z-50 rounded-b-[2.5rem] flex items-center justify-center">
-                            <div className="w-16 h-1.5 bg-slate-800 rounded-full"></div>
+                    <div className="relative w-[320px] h-[550px] bg-slate-900 rounded-[4.5rem] border-[14px] border-slate-950 shadow-2xl overflow-hidden font-sans phone-shadow z-10">
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-8 bg-slate-950 z-50 rounded-b-[2rem] flex items-center justify-center">
+                            <div className="w-14 h-1.5 bg-slate-800 rounded-full"></div>
                         </div>
 
-                        <div className="absolute top-0 w-full px-12 pt-4 flex justify-between items-center text-[10px] text-white/50 z-40 font-black tracking-tighter">
+                        <div className="absolute top-0 w-full px-10 pt-3 flex justify-between items-center text-[11px] text-white/50 z-40 font-black tracking-tighter">
                             <span>9:41</span>
                             <div className="flex gap-2 items-center">
                                 <i className="fas fa-signal"></i>
-                                <i className="fas fa-wifi text-[9px]"></i>
+                                <i className="fas fa-wifi text-[10px]"></i>
                                 <i className="fas fa-battery-full"></i>
                             </div>
                         </div>
@@ -215,30 +215,30 @@
                         <div className="h-full w-full bg-slate-50 relative overflow-hidden">
                             {screens[activeScreen].content}
 
-                            <div className="absolute bottom-0 w-full bg-white/95 backdrop-blur-2xl border-t border-slate-100 pt-3 pb-8 px-6 flex justify-between items-center z-50 shadow-[0_-15px_40px_rgba(0,0,0,0.03)]">
+                            <div className="absolute bottom-0 w-full bg-white/95 backdrop-blur-2xl border-t border-slate-100 pt-3 pb-6 px-5 flex justify-between items-center z-50 shadow-[0_-15px_40px_rgba(0,0,0,0.03)]">
                                 <div className={`flex flex-col items-center flex-1 transition-all duration-700 ${activeScreen === 0 ? 'text-[#008B99] scale-110' : 'text-slate-300'}`}>
-                                    <i className="fas fa-house-chimney text-xl mb-1.5"></i>
-                                    <span className="text-[8px] font-black uppercase tracking-[0.2em]">Home</span>
+                                    <i className="fas fa-house-chimney text-xl mb-1"></i>
+                                    <span className="text-[10px] font-black uppercase tracking-[0.1em]">Home</span>
                                 </div>
                                 <div className={`flex flex-col items-center flex-1 transition-all duration-700 ${activeScreen === 1 ? 'text-[#2962FF] scale-110' : 'text-slate-300'}`}>
-                                    <i className="fas fa-calendar-day text-xl mb-1.5"></i>
-                                    <span className="text-[8px] font-black uppercase tracking-[0.2em]">Visits</span>
+                                    <i className="fas fa-calendar-day text-xl mb-1"></i>
+                                    <span className="text-[10px] font-black uppercase tracking-[0.1em]">Visits</span>
                                 </div>
                                 <div className={`flex flex-col items-center flex-1 transition-all duration-700 ${activeScreen === 2 ? 'text-indigo-600 scale-110' : 'text-slate-300'}`}>
-                                    <i className="fas fa-message-sparkles text-xl mb-1.5"></i>
-                                    <span className="text-[8px] font-black uppercase tracking-[0.2em]">AI Hub</span>
+                                    <i className="fas fa-message-sparkles text-xl mb-1"></i>
+                                    <span className="text-[10px] font-black uppercase tracking-[0.1em]">AI Hub</span>
                                 </div>
                                 <div className="flex flex-col items-center flex-1">
-                                    <div className="w-11 h-11 rounded-2xl bg-red-500 text-white flex items-center justify-center shadow-xl shadow-red-200 border-2 border-white">
-                                        <i className="fas fa-phone-flip text-sm"></i>
+                                    <div className="w-12 h-12 rounded-2xl bg-red-500 text-white flex items-center justify-center shadow-xl shadow-red-200 border-2 border-white">
+                                        <i className="fas fa-phone-flip text-base"></i>
                                     </div>
-                                    <span className="text-[8px] font-black text-red-500 mt-1.5 uppercase tracking-[0.2em]">SOS</span>
+                                    <span className="text-[10px] font-black text-red-500 mt-1 uppercase tracking-[0.1em]">SOS</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="mt-12 flex flex-col items-center">
+                    <div className="mt-10 flex flex-col items-center">
                         <div className="flex gap-4">
                             {screens.map((_, i) => (
                                 <div 
@@ -248,7 +248,7 @@
                                 ></div>
                             ))}
                         </div>
-                        <p className="mt-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.5em] animate-pulse">Now Previewing {screens[activeScreen].title}</p>
+                        <p className="mt-5 text-[11px] font-black text-slate-400 uppercase tracking-[0.4em] animate-pulse">Now Previewing {screens[activeScreen].title}</p>
                     </div>
                 </div>
             );
@@ -278,21 +278,21 @@
                   <div className="h-14 lg:h-20">
                     <NovaraLogo className="h-full" />
                   </div>
-                  <div className="hidden md:flex space-x-8 text-base font-extrabold text-black uppercase tracking-widest text-[10px]">
+                  <div className="hidden md:flex space-x-8 text-xs font-extrabold text-black uppercase tracking-widest">
                     <a href="#mission" className="hover:text-[#2962FF] transition-colors">Our Approach</a>
                     <a href="#innovations" className="hover:text-[#2962FF] transition-colors">Innovations</a>
                     <a href="#leadership" className="hover:text-[#2962FF] transition-colors">Leadership</a>
                   </div>
-                  <button className="hidden md:inline-flex items-center justify-center px-5 py-2.5 text-[10px] font-black text-[#2962FF] border border-slate-200 rounded-lg hover:border-[#2962FF] hover:bg-[#2962FF]/5 transition-all uppercase tracking-widest">
+                  <button className="hidden md:inline-flex items-center justify-center px-6 py-2.5 text-xs font-black text-[#2962FF] border border-slate-200 rounded-lg hover:border-[#2962FF] hover:bg-[#2962FF]/5 transition-all uppercase tracking-widest">
                     Partner With Us
                   </button>
                 </div>
               </nav>
 
               <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center text-slate-900">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 text-[10px] font-bold text-[#008B99] mb-8 uppercase tracking-widest">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 text-xs font-bold text-[#008B99] mb-8 uppercase tracking-widest">
                   <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse"></span>
-                  Prototype Phase Active
+                  Active Prototype Phase
                 </div>
                 
                 <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight max-w-4xl text-slate-900">
@@ -304,10 +304,10 @@
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto font-sans">
-                  <a href="#innovations" className="inline-flex items-center justify-center px-8 py-4 text-[11px] font-black text-white bg-gradient-to-r from-[#2962FF] to-[#00E5FF] rounded-lg hover:shadow-lg hover:shadow-[#00E5FF]/30 transition-all transform hover:-translate-y-0.5 uppercase tracking-widest text-xs">
+                  <a href="#innovations" className="inline-flex items-center justify-center px-8 py-4 text-sm font-black text-white bg-gradient-to-r from-[#2962FF] to-[#00E5FF] rounded-lg hover:shadow-lg hover:shadow-[#00E5FF]/30 transition-all transform hover:-translate-y-0.5 uppercase tracking-widest">
                     Digital Innovations
                   </a>
-                  <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 text-[11px] font-black text-slate-700 border border-slate-300 rounded-lg hover:bg-slate-50 transition-all uppercase tracking-widest text-xs">
+                  <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 text-sm font-black text-slate-700 border border-slate-300 rounded-lg hover:bg-slate-50 transition-all uppercase tracking-widest">
                     Partner With Us
                   </a>
                 </div>
@@ -326,43 +326,47 @@
                       <i className="fas fa-shield-alt text-2xl"></i>
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-slate-900">Evidence-Based Care</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">Rooted in clinical excellence to ensure high-quality patient outcomes and adherence to global medical standards.</p>
+                    <p className="text-base text-slate-600 leading-relaxed">Rooted in clinical excellence to ensure high-quality patient outcomes and adherence to global medical standards.</p>
                   </div>
                   <div className="bg-white shadow-xl shadow-slate-200/50 border border-slate-100 rounded-[2.5rem] p-10 hover:-translate-y-2 transition-all duration-500 group">
                     <div className="w-14 h-14 rounded-2xl bg-[#00E5FF]/10 flex items-center justify-center mb-6 text-[#008B99] group-hover:scale-110 transition-transform">
                       <i className="fas fa-chart-line text-2xl"></i>
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-slate-900">Digital Innovation</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">Leveraging AI, mobile integrations, and real-time data tracking to eliminate critical healthcare delays.</p>
+                    <p className="text-base text-slate-600 leading-relaxed">Leveraging AI, mobile integrations, and real-time data tracking to eliminate critical healthcare delays.</p>
                   </div>
                   <div className="bg-white shadow-xl shadow-slate-200/50 border border-slate-100 rounded-[2.5rem] p-10 hover:-translate-y-2 transition-all duration-500 group">
                     <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#00E5FF]/10 to-[#2962FF]/10 flex items-center justify-center mb-6 text-[#2962FF] group-hover:scale-110 transition-transform">
                       <i className="fas fa-globe text-2xl"></i>
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-slate-900">Global Equity</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">Designing robust, localized systems that scale securely to serve the most vulnerable populations across Africa.</p>
+                    <p className="text-base text-slate-600 leading-relaxed">Designing robust, localized systems that scale securely to serve the most vulnerable populations across Africa.</p>
                   </div>
                 </div>
               </section>
 
-              {/* SECTION 3: INNOVATIONS (MATERNIX) - REDUCED FONT SIZE AS REQUESTED */}
+              {/* SECTION 3: INNOVATIONS (MATERNIX & ONCOLOGY) - RESTORED TITLE AND ONCOLOGY SECTION */}
               <section id="innovations" className="py-20 px-6 lg:px-8 max-w-7xl mx-auto bg-slate-50/50 rounded-[4rem] mb-20 border border-slate-100 font-sans">
+                <div className="max-w-6xl mx-auto mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Digital Innovations</h2>
+                </div>
+                
                 <div className="grid lg:grid-cols-2 gap-20 items-center max-w-6xl mx-auto">
                     <div className="p-2 space-y-8">
                       <div className="space-y-4">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 text-[10px] font-black text-[#008B99] mb-2 tracking-[0.3em] uppercase">
+                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 text-[11px] font-black text-[#008B99] mb-2 tracking-[0.3em] uppercase">
                           Active Prototype
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter uppercase">MATERNIX</h2>
-                        <p className="text-[#2962FF] font-semibold text-base mb-4 leading-relaxed">
+                        <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tighter uppercase">MATERNIX</h2>
+                        <p className="text-[#2962FF] font-semibold text-lg mb-4 leading-relaxed">
                           The Integrated Digital Health Ecosystem for Maternal and Neonatal Outcomes.
                         </p>
-                        <p className="text-sm text-slate-600 font-medium leading-relaxed max-w-md">
+                        <p className="text-base text-slate-600 font-medium leading-relaxed max-w-md">
                           Bridging the critical gap between facility-based care and the home environment for pregnant women and neonates in Rwanda.
                         </p>
                       </div>
                         
-                      <div className="space-y-4">
+                      <div className="space-y-6">
                           {[
                               "Automated Antenatal Care (ANC) scheduling.",
                               "Danger Sign Triage reporting.",
@@ -370,22 +374,42 @@
                               "\"Mama AI\" Chatbot for localized health education."
                           ].map((label, idx) => (
                               <div key={idx} className="flex gap-4 items-center group">
-                                  <div className="w-6 h-6 shrink-0 rounded-full bg-[#00E5FF] flex items-center justify-center text-white text-[8px] shadow-sm group-hover:scale-110 transition-all">
+                                  <div className="w-8 h-8 shrink-0 rounded-full bg-[#00E5FF] flex items-center justify-center text-white text-xs shadow-sm group-hover:scale-110 transition-all">
                                       <i className="fas fa-check"></i>
                                   </div>
-                                  <p className="text-sm font-medium text-slate-700">{label}</p>
+                                  <p className="text-lg font-medium text-slate-700">{label}</p>
                               </div>
                           ))}
                       </div>
 
-                      <div className="pt-6">
-                        <button className="px-8 py-4 bg-slate-900 text-white font-black text-[9px] rounded-[1.2rem] uppercase tracking-widest hover:bg-slate-800 transition-all shadow-2xl active:scale-95">
-                          View Build Architecture
+                      <div className="pt-8">
+                        <button className="px-10 py-4 bg-slate-900 text-white font-black text-[11px] rounded-[1.2rem] uppercase tracking-widest hover:bg-slate-800 transition-all shadow-2xl active:scale-95">
+                          View Case Study
                         </button>
                       </div>
                     </div>
                     <div className="flex justify-center lg:justify-end relative">
                         <MaternixPhone />
+                    </div>
+                  </div>
+
+                  {/* PROJECT 2: ONCOLOGY PIPELINE (RESTORED) */}
+                  <div className="max-w-6xl mx-auto mt-20 bg-white border border-slate-200 rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-[#2962FF]/5 rounded-full mix-blend-multiply filter blur-[80px]"></div>
+                    
+                    <div className="md:w-2/3 relative z-10">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-[10px] font-bold text-slate-500 mb-4 tracking-[0.2em] uppercase">
+                        In Development.
+                      </div>
+                      <h3 className="text-2xl font-bold mb-3 text-slate-900">Oncology Projects <span className="text-[#2962FF] font-semibold text-lg">(Health Education)</span></h3>
+                      <p className="text-base text-slate-600 leading-relaxed font-medium">
+                        Upcoming modules dedicated to digital cervical cancer and breast cancer awareness, screening, and health education.
+                      </p>
+                    </div>
+                    <div className="mt-6 md:mt-0 relative z-10">
+                      <button className="px-6 py-3 border border-[#2962FF]/30 bg-[#2962FF]/10 rounded-xl text-xs font-bold text-[#2962FF] shadow-sm cursor-not-allowed uppercase tracking-widest">
+                        Coming Soon
+                      </button>
                     </div>
                   </div>
               </section>
@@ -394,15 +418,15 @@
               <section id="leadership" className="py-24 px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200">
                 <div className="flex flex-col md:flex-row gap-12 items-center">
                   <div className="w-full md:w-1/3 flex justify-center md:justify-start">
-                    <div className="w-64 h-64 md:w-72 md:h-72 rounded-3xl bg-slate-100 border border-slate-200 shadow-inner flex items-center justify-center relative overflow-hidden group">
+                    <div className="w-64 h-64 md:w-80 md:h-80 rounded-3xl bg-slate-100 border border-slate-200 shadow-inner flex items-center justify-center relative overflow-hidden group">
                        <img src="Rwanda_20240221_MBBS28MGHDPortraits_AHabinshuti_1015.JPG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onError={(e) => { e.target.onerror = null; e.target.src = 'merci-headshot.jpg'; }} />
                        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-slate-900/40 to-transparent opacity-60"></div>
                     </div>
                   </div>
 
                   <div className="w-full md:w-2/3">
-                    <h2 className="text-2xl font-bold mb-6 text-slate-900 font-serif">Leadership & Vision</h2>
-                    <div className="prose max-w-none text-slate-600 leading-relaxed mb-8 font-sans text-sm">
+                    <h2 className="text-3xl font-bold mb-6 text-slate-900 font-serif">Leadership & Vision</h2>
+                    <div className="prose max-w-none text-slate-600 leading-relaxed mb-8 font-sans text-lg">
                       <p className="mb-4">
                         At Novara Global Health, our name reflects our ultimate vision: <strong className="text-slate-900">Nova stands for a new frontier</strong>, a new exceptional standard of care where global health equity is a reality, not just an aspiration.
                       </p>
@@ -414,15 +438,15 @@
                       </p>
                     </div>
                     <div className="pt-6 border-t border-slate-200 font-sans">
-                      <h4 className="text-lg font-extrabold text-slate-900 mb-1">Merci Uwingeneye</h4>
-                      <p className="text-[10px] font-bold text-[#2962FF] uppercase tracking-widest">MD/MGHD Candidate</p>
-                      <p className="text-[10px] font-bold text-slate-800 uppercase">Founder & CEO, Novara Global Health</p>
+                      <h4 className="text-2xl font-extrabold text-slate-900 mb-1">Merci Uwingeneye</h4>
+                      <p className="text-base font-bold text-[#2962FF] uppercase tracking-widest">MD/MGHD Candidate</p>
+                      <p className="text-base font-bold text-slate-800 uppercase mt-1">Founder & CEO, Novara Global Health</p>
                     </div>
                   </div>
                 </div>
               </section>
 
-              {/* FOOTER (EXACT FORMATTING & SOCIAL ICONS PRESERVED) */}
+              {/* FOOTER */}
               <footer id="contact" className="bg-slate-50 border-t border-slate-200 pt-20 pb-10 font-sans">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
@@ -430,17 +454,17 @@
                       <div className="h-12 lg:h-14 mb-6">
                         <NovaraLogo className="h-full" />
                       </div>
-                      <p className="text-slate-600 max-w-sm mb-6 text-xs leading-relaxed">
+                      <p className="text-slate-600 max-w-sm mb-6 text-base leading-relaxed">
                         Advancing global health equity through digital health innovations, health education, and evidence-based care in Rwanda and Africa.
                       </p>
-                      <p className="text-slate-900 font-bold text-xs flex items-center gap-2">
+                      <p className="text-slate-900 font-bold text-base flex items-center gap-2">
                         <i className="fas fa-envelope text-[#2A8B82]"></i> Contact: <a href="mailto:novara.globalhealth@gmail.com" className="text-slate-600 font-medium hover:text-[#2A8B82] transition-colors">novara.globalhealth@gmail.com</a>
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-slate-900 font-bold mb-6 text-sm uppercase tracking-widest">Platform</h4>
-                      <ul className="space-y-4 text-xs font-bold text-slate-700">
+                      <h4 className="text-slate-900 font-bold mb-6 text-base">Platform</h4>
+                      <ul className="space-y-4 text-sm font-bold text-slate-700">
                         <li><a href="#mission" className="hover:text-[#2962FF] transition-colors">Our Approach</a></li>
                         <li><a href="#innovations" className="hover:text-[#2962FF] transition-colors">Digital Innovations</a></li>
                         <li><a href="#leadership" className="hover:text-[#2962FF] transition-colors">Leadership</a></li>
@@ -448,33 +472,33 @@
                     </div>
 
                     <div>
-                      <h4 className="text-slate-900 font-bold mb-6 text-sm uppercase tracking-widest">Connect With Us</h4>
+                      <h4 className="text-slate-900 font-bold mb-6 text-base">Connect With Us</h4>
                       <div className="flex flex-col gap-3">
-                        <a href="https://www.linkedin.com/company/novara-global-health/" target="_blank" className="bg-[#2A8B82] hover:bg-[#1f6b64] text-white rounded-lg px-6 py-3.5 text-xs font-bold transition-all shadow-sm flex items-center gap-4 w-full">
-                          <i className="fa-brands fa-linkedin text-lg"></i> LinkedIn
+                        <a href="https://www.linkedin.com/company/novara-global-health/" target="_blank" className="bg-[#2A8B82] hover:bg-[#1f6b64] text-white rounded-lg px-6 py-3.5 text-sm font-bold transition-all shadow-sm flex items-center gap-4 w-full">
+                          <i className="fa-brands fa-linkedin text-xl"></i> LinkedIn
                         </a>
-                        <a href="#" className="bg-[#2A8B82] hover:bg-[#1f6b64] text-white rounded-lg px-6 py-3.5 text-xs font-bold transition-all shadow-sm flex items-center gap-4 w-full">
-                          <i className="fa-brands fa-x-twitter text-lg"></i> Twitter/X
+                        <a href="#" className="bg-[#2A8B82] hover:bg-[#1f6b64] text-white rounded-lg px-6 py-3.5 text-sm font-bold transition-all shadow-sm flex items-center gap-4 w-full">
+                          <i className="fa-brands fa-x-twitter text-xl"></i> Twitter/X
                         </a>
-                        <a href="#" className="bg-[#2A8B82] hover:bg-[#1f6b64] text-white rounded-lg px-6 py-3.5 text-xs font-bold transition-all shadow-sm flex items-center gap-4 w-full">
-                          <i className="fa-brands fa-instagram text-lg"></i> Instagram
+                        <a href="#" className="bg-[#2A8B82] hover:bg-[#1f6b64] text-white rounded-lg px-6 py-3.5 text-sm font-bold transition-all shadow-sm flex items-center gap-4 w-full">
+                          <i className="fa-brands fa-instagram text-xl"></i> Instagram
                         </a>
                       </div>
                     </div>
 
                     <div>
-                      <h4 className="text-slate-900 font-bold mb-6 text-sm uppercase tracking-widest">Partner With Us</h4>
+                      <h4 className="text-slate-900 font-bold mb-6 text-base">Partner With Us</h4>
                       <form action="https://formspree.io/f/mykbvraq" method="POST" className="space-y-3">
-                        <input type="email" name="email" placeholder="Email Address" className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-xs text-slate-900 focus:ring-2 focus:ring-[#00E5FF] outline-none shadow-sm" required />
-                        <textarea name="message" placeholder="Your message" rows="3" className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-xs text-slate-900 focus:ring-2 focus:ring-[#00E5FF] outline-none shadow-sm resize-none" required></textarea>
-                        <button type="submit" className="w-full bg-[#2962FF] hover:bg-[#1E40AF] text-white font-bold rounded-lg px-4 py-3.5 text-xs transition-all shadow-md flex items-center justify-center gap-2">
+                        <input type="email" name="email" placeholder="Email Address" className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-sm text-slate-900 focus:ring-2 focus:ring-[#00E5FF] outline-none shadow-sm" required />
+                        <textarea name="message" placeholder="Your message" rows="3" className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-sm text-slate-900 focus:ring-2 focus:ring-[#00E5FF] outline-none shadow-sm resize-none" required></textarea>
+                        <button type="submit" className="w-full bg-[#2962FF] hover:bg-[#1E40AF] text-white font-bold rounded-lg px-4 py-3.5 text-sm transition-all shadow-md flex items-center justify-center gap-2">
                           <i className="fas fa-envelope"></i> Send Message
                         </button>
                       </form>
                     </div>
                   </div>
                   
-                  <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] font-black text-slate-400 uppercase tracking-widest">
+                  <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-black text-slate-400 uppercase tracking-widest">
                     <p>© {new Date().getFullYear()} Novara Global Health. All rights reserved. | Kigali, Rwanda</p>
                     <div className="flex items-center gap-2 text-teal-700 bg-teal-50 border border-teal-100 px-3 py-1.5 rounded-full">
                       <div className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></div>
