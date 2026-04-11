@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novara GlobalHealth Platform</title>
     
-    <!-- Vercel Web Analytics & Speed Insights Trackers -->
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
       window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
@@ -13,17 +12,13 @@
     <script src="/_vercel/insights/script.js"></script>
     <script src="/_vercel/speed-insights/script.js"></script>
     
-    <!-- React & ReactDOM -->
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     
-    <!-- Babel for JSX -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -191,7 +186,7 @@
             useEffect(() => {
                 const timer = setInterval(() => {
                     setActiveScreen(prev => (prev + 1) % screens.length);
-                }, 12000); // 8s stay active + 4s transition
+                }, 11000); // 7s stay active + 4s transition = 11s total
                 return () => clearInterval(timer);
             }, []);
 
@@ -408,11 +403,11 @@
                     
                     <div className="md:w-2/3 relative z-10">
                       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-[10px] font-bold text-slate-500 mb-4 tracking-[0.2em] uppercase">
-                        In Development.
+                        In Development Pipeline
                       </div>
                       <h3 className="text-2xl font-bold mb-3 text-slate-900">Oncology Projects <span className="text-[#2962FF] font-semibold text-lg">(Health Education)</span></h3>
                       <p className="text-base text-slate-600 leading-relaxed font-medium">
-                        Upcoming modules dedicated to digital cervical cancer and breast cancer awareness, screening registries, and health education.
+                        Upcoming modules dedicated to digital cervical cancer and breast cancer awareness, screening tools, and health education.
                       </p>
                     </div>
                     <div className="mt-6 md:mt-0 relative z-10">
