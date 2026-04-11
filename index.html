@@ -169,7 +169,7 @@
                                 </div>
                                 <div>
                                     <h4 className="text-xl font-bold tracking-tight">Mama AI</h4>
-                                    <p className="text-[10px] text-indigo-100 font-black uppercase tracking-widest">Medical Assistant</p>
+                                    <p className="text-[10px] text-indigo-100 font-black uppercase tracking-widest">Health Education Assistant</p>
                                 </div>
                             </div>
                             <div className="flex-1 p-4 space-y-3">
@@ -191,7 +191,7 @@
             useEffect(() => {
                 const timer = setInterval(() => {
                     setActiveScreen(prev => (prev + 1) % screens.length);
-                }, 12000); // 8s stay active + 4s transition
+                }, 12000);
                 return () => clearInterval(timer);
             }, []);
 
@@ -199,7 +199,6 @@
                 <div className="relative group cursor-default flex flex-col items-center">
                     <div className="absolute inset-0 bg-teal-400/20 blur-[100px] rounded-full scale-90 transition-opacity opacity-0 group-hover:opacity-100 duration-1000"></div>
                     
-                    {/* Natively smaller dimensions: 280x580 to prevent subpixel blurring completely */}
                     <div className="relative w-[280px] h-[580px] bg-slate-900 rounded-[3.5rem] border-[12px] border-slate-950 shadow-2xl overflow-hidden font-sans phone-shadow z-10">
                         
                         {/* Notch */}
@@ -281,6 +280,7 @@
                 <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#00E5FF] rounded-full mix-blend-multiply filter blur-[120px] opacity-10"></div>
               </div>
 
+              {/* NAV */}
               <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md border-b border-slate-200 py-4 shadow-sm' : 'bg-transparent py-6'}`}>
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
                   <div className="h-14 lg:h-20">
@@ -297,6 +297,7 @@
                 </div>
               </nav>
 
+              {/* HERO */}
               <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center text-slate-900">
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 text-xs font-bold text-[#008B99] mb-8 uppercase tracking-widest">
                   <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse"></span>
@@ -321,11 +322,13 @@
                 </div>
               </section>
 
+              {/* SECTION 2: OUR APPROACH */}
               <section id="mission" className="py-20 px-6 lg:px-8 max-w-7xl mx-auto font-sans border-t border-slate-100">
                 <div className="mb-16 md:w-2/3">
                   <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900 tracking-tight">Our Approach</h2>
+                  {/* FIX 1: Removed quotation marks — paragraph now reads in Novara's own authoritative voice */}
                   <p className="text-lg text-slate-600 leading-relaxed font-medium">
-                    "At Novara Global Health, we build digital health solutions, empower people, and strengthen health systems worldwide. We translate rigorous clinical research into scalable digital infrastructure."
+                    At Novara Global Health, we build digital health solutions, empower people, and strengthen health systems worldwide. We translate rigorous clinical research into scalable digital infrastructure.
                   </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -351,9 +354,18 @@
                     <p className="text-base text-slate-600 leading-relaxed">Designing robust, localized systems that scale securely to serve the most vulnerable populations across Africa.</p>
                   </div>
                 </div>
+
+                {/* FIX 3: Data Privacy Statement */}
+                <div className="mt-12 flex items-start gap-4 bg-[#2962FF]/5 border border-[#2962FF]/15 rounded-2xl px-7 py-5">
+                  <i className="fas fa-lock text-[#2962FF] text-lg mt-0.5 shrink-0"></i>
+                  <p className="text-sm text-slate-600 leading-relaxed font-medium">
+                    <span className="font-bold text-slate-800">Built with patient privacy at its core.</span> All health data handled by Novara Global Health is processed in accordance with Rwanda's Law No. 058/2021 on the Protection of Personal Data and Privacy, and aligned with international digital health standards including WHO DHDP guidelines. We never sell or share personal health data with third parties.{' '}
+                    <a href="mailto:novara.globalhealth@gmail.com?subject=Privacy%20Policy%20Inquiry" className="text-[#2962FF] font-semibold hover:underline">Request our full Privacy Policy →</a>
+                  </p>
+                </div>
               </section>
 
-              {/* SECTION 3: INNOVATIONS (MATERNIX & ONCOLOGY) */}
+              {/* SECTION 3: INNOVATIONS */}
               <section id="innovations" className="py-20 px-6 lg:px-8 max-w-7xl mx-auto bg-slate-50/50 rounded-[4rem] mb-20 border border-slate-100 font-sans">
                 <div className="max-w-6xl mx-auto mb-12">
                   <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Digital Innovations</h2>
@@ -390,7 +402,15 @@
                           ))}
                       </div>
 
-                      <div className="pt-6">
+                      {/* FIX 4: Mama AI Disclaimer */}
+                      <div className="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl px-5 py-4">
+                        <i className="fas fa-circle-info text-amber-500 text-sm mt-0.5 shrink-0"></i>
+                        <p className="text-xs text-amber-800 leading-relaxed font-medium">
+                          <span className="font-bold">Disclaimer:</span> Mama AI is a health education assistant only. It does not provide medical diagnoses or replace the advice of a licensed clinician or healthcare professional. Always consult a qualified health provider for medical decisions.
+                        </p>
+                      </div>
+
+                      <div className="pt-2">
                         <button className="px-8 py-4 bg-slate-900 text-white font-black text-xs rounded-[1.2rem] uppercase tracking-widest hover:bg-slate-800 transition-all shadow-2xl active:scale-95">
                           View Case Study
                         </button>
@@ -448,7 +468,8 @@
                     </div>
                     <div className="pt-6 border-t border-slate-200 font-sans">
                       <h4 className="text-2xl font-extrabold text-slate-900 mb-1">Merci Uwingeneye</h4>
-                      <p className="text-base font-bold text-[#2962FF] uppercase tracking-widest">MD/MGHD Candidate</p>
+                      {/* FIX 2: Added UGHE institution for credibility with global health funders */}
+                      <p className="text-base font-bold text-[#2962FF] uppercase tracking-widest">MD/MGHD Candidate · University of Global Health Equity (UGHE)</p>
                       <p className="text-base font-bold text-slate-800 uppercase mt-1">Founder & CEO, Novara Global Health</p>
                     </div>
                   </div>
