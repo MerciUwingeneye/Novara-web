@@ -41,6 +41,18 @@
         .phone-shadow {
             box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.4), 0 20px 40px -20px rgba(0, 0, 0, 0.5);
         }
+
+        /* Custom Organic Blob Shapes for the Photo Frame */
+        .squircle-bg {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            animation: morph 8s ease-in-out infinite;
+        }
+
+        @keyframes morph {
+            0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+            100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        }
         
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -186,7 +198,7 @@
             useEffect(() => {
                 const timer = setInterval(() => {
                     setActiveScreen(prev => (prev + 1) % screens.length);
-                }, 11000); // 7s stay active + 4s transition = 11s total
+                }, 11000); // 7s stay active + 4s transition
                 return () => clearInterval(timer);
             }, []);
 
@@ -194,15 +206,12 @@
                 <div className="relative group cursor-default flex flex-col items-center">
                     <div className="absolute inset-0 bg-teal-400/20 blur-[100px] rounded-full scale-90 transition-opacity opacity-0 group-hover:opacity-100 duration-1000"></div>
                     
-                    {/* Natively smaller dimensions: 280x580 to prevent subpixel blurring completely */}
+                    {/* Natively smaller dimensions */}
                     <div className="relative w-[280px] h-[580px] bg-slate-900 rounded-[3.5rem] border-[12px] border-slate-950 shadow-2xl overflow-hidden font-sans phone-shadow z-10">
-                        
-                        {/* Notch */}
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-36 h-7 bg-slate-950 z-50 rounded-b-[1.5rem] flex items-center justify-center">
                             <div className="w-12 h-1 bg-slate-800 rounded-full"></div>
                         </div>
 
-                        {/* Status Bar */}
                         <div className="absolute top-0 w-full px-8 pt-3 flex justify-between items-center text-[10px] text-white/50 z-40 font-black tracking-tighter">
                             <span>9:41</span>
                             <div className="flex gap-1.5 items-center">
@@ -212,11 +221,9 @@
                             </div>
                         </div>
 
-                        {/* Content Area */}
                         <div className="h-full w-full bg-slate-50 relative overflow-hidden">
                             {screens[activeScreen].content}
 
-                            {/* Bottom Nav Bar */}
                             <div className="absolute bottom-0 w-full bg-white/95 backdrop-blur-xl border-t border-slate-100 pt-3 pb-6 px-5 flex justify-between items-center z-50 shadow-[0_-15px_30px_rgba(0,0,0,0.03)]">
                                 <div className={`flex flex-col items-center flex-1 transition-all duration-700 ${activeScreen === 0 ? 'text-[#008B99]' : 'text-slate-300'}`}>
                                     <i className="fas fa-house-chimney text-[17px] mb-1"></i>
@@ -240,7 +247,6 @@
                         </div>
                     </div>
 
-                    {/* Progress Indicator */}
                     <div className="mt-8 flex flex-col items-center">
                         <div className="flex gap-3">
                             {screens.map((_, i) => (
@@ -293,11 +299,6 @@
               </nav>
 
               <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center text-slate-900">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 text-xs font-bold text-[#008B99] mb-8 uppercase tracking-widest">
-                  <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse"></span>
-                  Active Prototype Phase
-                </div>
-                
                 <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight max-w-4xl text-slate-900">
                   Advancing the Future of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] to-[#2962FF]">Equitable Healthcare.</span>
                 </h1>
@@ -316,12 +317,84 @@
                 </div>
               </section>
 
-              <section id="mission" className="py-20 px-6 lg:px-8 max-w-7xl mx-auto font-sans border-t border-slate-100">
-                <div className="mb-16 md:w-2/3">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900 tracking-tight">Our Mission</h2>
-                  <p className="text-lg text-slate-600 leading-relaxed font-medium">
-                    "To improve health outcomes and equity in Rwanda and across Africa by delivering continuous, evidence-based care through accessible digital health solutions."
+              {/* NEW SECTION: GLOBAL BURDEN DATA */}
+              <section className="py-24 px-6 bg-slate-50/50 font-sans border-y border-slate-100">
+                <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
+                  
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 text-[11px] font-black text-[#008B99] mb-6 tracking-[0.3em] uppercase">
+                    Global Burden of Maternal & Neonatal Mortality
+                  </div>
+                  
+                  <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight max-w-4xl text-slate-900">
+                    2.6 Million <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] to-[#2962FF]">Deaths Annually.</span>
+                  </h2>
+                  
+                  <p className="text-lg text-slate-600 font-medium leading-relaxed mb-12 max-w-4xl">
+                    Maternal and neonatal mortality remain among the most critical indicators of global health inequity. Despite significant medical advancements, a disproportionate burden persists in low-resource settings. According to the World Health Organization, the vast majority of these deaths are preventable through timely, evidence-based clinical interventions and access to quality antenatal, delivery, and postnatal care (WHO, 2024–2025).
                   </p>
+                  
+                  <div className="w-full max-w-4xl flex items-center gap-4 mb-12">
+                    <div className="h-px bg-slate-200 flex-1"></div>
+                    <h4 className="text-slate-900 font-bold text-xs uppercase tracking-widest">Key Global Statistics</h4>
+                    <div className="h-px bg-slate-200 flex-1"></div>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-full">
+                    <div className="flex flex-col items-center">
+                      <div className="text-3xl md:text-4xl font-black text-[#2962FF] mb-4 tracking-tight">287,000</div>
+                      <div className="flex items-center gap-3 group">
+                        <div className="w-8 h-8 shrink-0 rounded-full bg-[#00E5FF]/10 flex items-center justify-center text-[#008B99] shadow-sm group-hover:scale-110 transition-all">
+                          <i className="fas fa-person-pregnant"></i>
+                        </div>
+                        <span className="text-sm font-medium text-slate-700 text-left max-w-[120px]">maternal deaths each year</span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <div className="text-3xl md:text-4xl font-black text-[#2962FF] mb-4 tracking-tight">2.3 Million</div>
+                      <div className="flex items-center gap-3 group">
+                        <div className="w-8 h-8 shrink-0 rounded-full bg-[#00E5FF]/10 flex items-center justify-center text-[#008B99] shadow-sm group-hover:scale-110 transition-all">
+                          <i className="fas fa-baby"></i>
+                        </div>
+                        <span className="text-sm font-medium text-slate-700 text-left max-w-[120px]">newborn deaths annually</span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <div className="text-3xl md:text-4xl font-black text-[#2962FF] mb-4 tracking-tight">47%</div>
+                      <div className="flex items-center gap-3 group">
+                        <div className="w-8 h-8 shrink-0 rounded-full bg-[#00E5FF]/10 flex items-center justify-center text-[#008B99] shadow-sm group-hover:scale-110 transition-all">
+                          <i className="fas fa-chart-pie"></i>
+                        </div>
+                        <span className="text-sm font-medium text-slate-700 text-left max-w-[140px]">of under-five deaths occur in neonatal period</span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <div className="text-3xl md:text-4xl font-black text-[#2962FF] mb-4 tracking-tight">~95%</div>
+                      <div className="flex items-center gap-3 group">
+                        <div className="w-8 h-8 shrink-0 rounded-full bg-[#00E5FF]/10 flex items-center justify-center text-[#008B99] shadow-sm group-hover:scale-110 transition-all">
+                          <i className="fas fa-earth-africa"></i>
+                        </div>
+                        <span className="text-sm font-medium text-slate-700 text-left max-w-[140px]">of deaths occur in LMIC nations</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+
+              <section id="mission" className="py-20 px-6 lg:px-8 max-w-7xl mx-auto font-sans">
+                <div className="mb-16 flex flex-col md:flex-row gap-12 md:gap-24">
+                  <div className="flex-1">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900 tracking-tight">Our Mission</h2>
+                    <p className="text-lg text-slate-600 leading-relaxed font-medium">
+                      "To improve health outcomes and equity in Rwanda and across Africa by delivering continuous, evidence-based care through accessible digital health solutions."
+                    </p>
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900 tracking-tight">Our Vision</h2>
+                    <p className="text-lg text-slate-600 leading-relaxed font-medium">
+                      "A future of resilient, equitable, and sustainable healthcare in Rwanda and Africa."
+                    </p>
+                  </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="bg-white shadow-xl shadow-slate-200/50 border border-slate-100 rounded-[2.5rem] p-10 hover:-translate-y-2 transition-all duration-500 group">
@@ -362,7 +435,7 @@
                         </div>
                         <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tighter uppercase">MATERNIX</h2>
                         <p className="text-[#2962FF] font-semibold text-lg mb-4 leading-relaxed">
-                          The Integrated Digital Health product/app for improving Maternal and Neonatal health Outcomes.
+                          Integrated Digital Health product/app for improving Maternal and Neonatal health Outcomes.
                         </p>
                         <p className="text-base text-slate-600 font-medium leading-relaxed max-w-md">
                           Bridging the critical gap between facility-based care and the home environment for pregnant women and neonates in Rwanda.
@@ -453,7 +526,7 @@
               {/* FOOTER */}
               <footer id="contact" className="bg-slate-50 border-t border-slate-200 pt-20 pb-10 font-sans">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
                     <div className="lg:col-span-2">
                       <div className="h-12 lg:h-14 mb-6">
                         <NovaraLogo className="h-full" />
@@ -472,6 +545,15 @@
                         <li><a href="#mission" className="hover:text-[#2962FF] transition-colors">Our Mission</a></li>
                         <li><a href="#innovations" className="hover:text-[#2962FF] transition-colors">Digital Innovations</a></li>
                         <li><a href="#leadership" className="hover:text-[#2962FF] transition-colors">Leadership</a></li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="text-slate-900 font-bold mb-6 text-base">Legal</h4>
+                      <ul className="space-y-4 text-sm font-bold text-slate-700">
+                        <li><a href="#" className="hover:text-[#2962FF] transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" className="hover:text-[#2962FF] transition-colors">Terms of Service</a></li>
+                        <li><a href="#" className="hover:text-[#2962FF] transition-colors">Cookie Policy</a></li>
                       </ul>
                     </div>
 
