@@ -299,7 +299,7 @@
               </nav>
 
               <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center text-slate-900">
-                <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight max-w-4xl text-slate-900">
+                <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight max-w-4xl text-slate-900">
                   Advancing the Future of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] to-[#2962FF]">Equitable Healthcare.</span>
                 </h1>
                 
@@ -318,8 +318,8 @@
               </section>
 
               {/* NEW SECTION: GLOBAL BURDEN DATA */}
-              <section className="py-24 px-6 bg-slate-50/50 font-sans border-y border-slate-100">
-                <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
+              <section className="py-24 px-6 bg-slate-50/50 font-sans border-y border-slate-100 overflow-hidden">
+                <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
                   
                   <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 text-[11px] font-black text-[#008B99] mb-6 tracking-[0.3em] uppercase">
                     Global Burden of Maternal & Neonatal Mortality
@@ -332,6 +332,41 @@
                   <p className="text-lg text-slate-600 font-medium leading-relaxed mb-12 max-w-4xl">
                     Maternal and neonatal mortality remain among the most critical indicators of global health inequity. Despite significant medical advancements, a disproportionate burden persists in low-resource settings. According to the World Health Organization, the vast majority of these deaths are preventable through timely, evidence-based clinical interventions and access to quality antenatal, delivery, and postnatal care (WHO, 2024–2025).
                   </p>
+
+                  {/* --- WORLD MAP FIGURE --- */}
+                  <div className="relative w-full max-w-4xl mx-auto mb-16 h-[250px] md:h-[450px]">
+                    
+                    {/* Main Map with Single Solid Brand Color */}
+                    <div 
+                      className="absolute inset-0 bg-[#008B99]"
+                      style={{ 
+                        WebkitMaskImage: 'url("https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg")', 
+                        WebkitMaskSize: 'contain', 
+                        WebkitMaskRepeat: 'no-repeat', 
+                        WebkitMaskPosition: 'center',
+                        maskImage: 'url("https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg")',
+                        maskSize: 'contain',
+                        maskRepeat: 'no-repeat',
+                        maskPosition: 'center'
+                      }}
+                    ></div>
+
+                    {/* Interactive Pulse Marker on Sub-Saharan Africa */}
+                    <div className="absolute top-[55%] left-[51%] md:top-[56%] md:left-[52%] flex flex-col items-center group cursor-pointer z-10">
+                      <div className="relative flex justify-center items-center">
+                        <span className="absolute w-6 h-6 md:w-10 md:h-10 bg-red-500 rounded-full animate-ping opacity-60"></span>
+                        <span className="relative w-2.5 h-2.5 md:w-3 md:h-3 bg-white border-2 border-red-500 rounded-full shadow-[0_0_15px_rgba(239,68,68,0.8)]"></span>
+                      </div>
+                      
+                      {/* Interactive Tooltip on Hover */}
+                      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-64 bg-white/95 backdrop-blur-md border border-slate-200 shadow-2xl rounded-2xl p-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 pointer-events-none z-20">
+                        <div className="text-[10px] font-black text-red-500 uppercase tracking-widest mb-1 flex items-center gap-1">
+                          <i className="fas fa-exclamation-circle"></i> High-Burden Regions
+                        </div>
+                        <p className="text-xs font-medium text-slate-700 leading-relaxed text-left">Over <strong className="text-slate-900">95%</strong> of maternal and neonatal deaths occur in low- and middle-income countries.</p>
+                      </div>
+                    </div>
+                  </div>
                   
                   <div className="w-full max-w-4xl flex items-center gap-4 mb-12">
                     <div className="h-px bg-slate-200 flex-1"></div>
@@ -505,7 +540,7 @@
                     <h2 className="text-3xl font-bold mb-6 text-slate-900 font-serif">Leadership & Vision</h2>
                     <div className="prose max-w-none text-slate-600 leading-relaxed mb-8 font-sans text-lg">
                       <p className="mb-4">
-                        At Novara GlobalHealth, our name reflects our ultimate vision: <strong className="text-slate-900">Nova stands for a new frontier</strong>, a new exceptional standard of care where global health equity is a reality, not just an aspiration.
+                        At Novara Global Health, our name reflects our ultimate vision: <strong className="text-slate-900">Nova stands for a new frontier</strong>, a new exceptional standard of care where global health equity is a reality, not just an aspiration.
                       </p>
                       <p className="mb-4">
                         We believe that <strong className="text-slate-800">access to high-quality, evidence-based medicine</strong> should never be limited by geography, systemic delays, or socioeconomic circumstance. Our commitment is to advance global health equity through <strong className="text-slate-800">digital health innovations, health education, and evidence-based care</strong>.
@@ -517,7 +552,7 @@
                     <div className="pt-6 border-t border-slate-200 font-sans">
                       <h4 className="text-2xl font-extrabold text-slate-900 mb-1">Merci Uwingeneye</h4>
                       <p className="text-base font-bold text-[#2962FF] uppercase tracking-widest">MD/MGHD Candidate</p>
-                      <p className="text-base font-bold text-slate-800 uppercase mt-1">Founder & CEO, Novara GlobalHealth</p>
+                      <p className="text-base font-bold text-slate-800 uppercase mt-1">Founder & CEO, Novara Global Health</p>
                     </div>
                   </div>
                 </div>
