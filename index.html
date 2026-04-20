@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novara GlobalHealth Platform</title>
     
-    <!-- 1. Preconnect to external servers to speed up initial connection -->
-    <link rel="preconnect" href="https://unpkg.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
-    <!-- Vercel Trackers (Added 'defer' so they don't block loading) -->
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
       window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
@@ -18,23 +12,19 @@
     <script src="/_vercel/insights/script.js"></script>
     <script src="/_vercel/speed-insights/script.js"></script>
     
-    <!-- 2. React & ReactDOM (Switched from 'development' to 'production' for massive speed boost) -->
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     
-    <!-- Babel for JSX -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
         
-        body { font-family: 'Times New Roman', Times, serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; margin: 0; padding: 0; }
+        body { font-family: 'Times New Roman', Times, serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
         .font-sans { font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
 
@@ -66,26 +56,10 @@
         
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-        /* PRELOADER STYLES (Crucial for Speed Score) */
-        #initial-loader {
-            position: fixed; inset: 0; z-index: 99999; background-color: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Inter', sans-serif;
-        }
-        .spinner {
-            width: 48px; height: 48px; border: 4px solid #f1f5f9; border-top: 4px solid #00E5FF; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 24px;
-        }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
-    <!-- The Root Div now contains a hardcoded HTML loading screen. This fixes the FCP (First Contentful Paint) score instantly. -->
-    <div id="root">
-        <div id="initial-loader">
-            <div class="spinner"></div>
-            <h2 style="color: #0f172a; font-size: 28px; font-weight: bold; font-family: 'Times New Roman', serif; margin: 0; letter-spacing: -0.02em;">Novara GlobalHealth<span style="color: #00E5FF;">.</span></h2>
-            <p style="color: #64748b; font-size: 13px; margin-top: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;">Loading Clinical Prototype...</p>
-        </div>
-    </div>
+    <div id="root"></div>
 
     <script type="text/babel">
         const { useState, useEffect, useRef } = React;
