@@ -76,13 +76,14 @@
             <g transform="translate(0, 20)">
               <svg width="60" height="60" viewBox="0 0 100 100">
                 <polygon points="50,15 75,50 50,85 25,50" fill="url(#grad19-app)" opacity="0.9"/>
-                <circle cx="50" cy="50" r="5" fill="#FFFFFF"/>
+                <circle cx="50" cy="50" r="5" fill="#0F172A"/>
                 <path d="M 22 25 Q 5 50 22 75" stroke="#2962FF" strokeWidth="5" strokeLinecap="round" fill="none"/>
                 <path d="M 78 25 Q 95 50 78 75" stroke="#00E5FF" strokeWidth="5" strokeLinecap="round" fill="none"/>
               </svg>
             </g>
-            <text x="75" y="64" fontFamily="'Times New Roman', Times, serif" fontSize="48" fontWeight="900" fill="#0F172A" letterSpacing="-0.02em">
-              Novara GlobalHealth<tspan fill="#00E5FF">.</tspan>
+            {/* TEXT COLOR CHANGED TO WHITE (#FFFFFF) */}
+            <text x="75" y="64" fontFamily="'Times New Roman', Times, serif" fontSize="48" fontWeight="900" fill="#FFFFFF" letterSpacing="-0.02em">
+              Novara GlobalHealth
             </text>
           </svg>
         );
@@ -282,23 +283,25 @@
                 <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#00E5FF] rounded-full mix-blend-multiply filter blur-[120px] opacity-10"></div>
               </div>
 
-              <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md border-b border-slate-200 py-4 shadow-sm' : 'bg-transparent py-6'}`}>
+              {/* NAVBAR - CHANGED TO DARK (#050A14) TO SUPPORT WHITE LOGO TEXT */}
+              <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#050A14]/95 backdrop-blur-md border-b border-slate-800 py-4 shadow-sm' : 'bg-[#050A14] py-6'}`}>
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
                   <div className="h-14 lg:h-20">
                     <NovaraLogo className="h-full" />
                   </div>
-                  <div className="hidden md:flex space-x-8 text-xs font-extrabold text-black uppercase tracking-widest">
-                    <a href="#mission" className="hover:text-[#2962FF] transition-colors">Our Mission</a>
-                    <a href="#innovations" className="hover:text-[#2962FF] transition-colors">Innovations</a>
-                    <a href="#leadership" className="hover:text-[#2962FF] transition-colors">Leadership</a>
+                  <div className="hidden md:flex space-x-8 text-xs font-extrabold text-white uppercase tracking-widest">
+                    <a href="#mission" className="hover:text-[#00E5FF] transition-colors">Our Mission</a>
+                    <a href="#innovations" className="hover:text-[#00E5FF] transition-colors">Innovations</a>
+                    <a href="#leadership" className="hover:text-[#00E5FF] transition-colors">Leadership</a>
                   </div>
-                  <button className="hidden md:inline-flex items-center justify-center px-6 py-2.5 text-xs font-black text-[#2962FF] border border-slate-200 rounded-lg hover:border-[#2962FF] hover:bg-[#2962FF]/5 transition-all uppercase tracking-widest">
+                  <button className="hidden md:inline-flex items-center justify-center px-6 py-2.5 text-xs font-black text-[#00E5FF] border border-slate-700 rounded-lg hover:border-[#00E5FF] hover:bg-[#00E5FF]/10 transition-all uppercase tracking-widest">
                     Partner With Us
                   </button>
                 </div>
               </nav>
 
-              <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center text-slate-900">
+              {/* ADDED PADDING TOP TO PUSH CONTENT BELOW DARK NAVBAR */}
+              <section className="relative pt-48 pb-20 lg:pt-56 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center text-slate-900">
                 <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight max-w-4xl text-slate-900">
                   Advancing the Future of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] to-[#2962FF]">Equitable Healthcare.</span>
                 </h1>
@@ -558,60 +561,60 @@
                 </div>
               </section>
 
-              {/* FOOTER */}
-              <footer id="contact" className="bg-slate-50 border-t border-slate-200 pt-20 pb-10 font-sans">
+              {/* FOOTER - CHANGED TO DARK (#050A14) TO MATCH NAVBAR AND SHOWCASE WHITE LOGO */}
+              <footer id="contact" className="bg-[#050A14] border-t border-slate-800 pt-20 pb-10 font-sans">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
                     <div className="lg:col-span-2">
                       <div className="h-12 lg:h-14 mb-6">
                         <NovaraLogo className="h-full" />
                       </div>
-                      <p className="text-slate-600 max-w-sm mb-6 text-base leading-relaxed">
+                      <p className="text-slate-400 max-w-sm mb-6 text-base leading-relaxed">
                         Advancing global health equity through digital health innovations, health education, and evidence-based care in Rwanda and Africa.
                       </p>
-                      <p className="text-slate-900 font-bold text-base flex items-center gap-2">
-                        <i className="fas fa-envelope text-[#2A8B82]"></i> Contact: <a href="mailto:novara.globalhealth@gmail.com" className="text-slate-600 font-medium hover:text-[#2A8B82] transition-colors">novara.globalhealth@gmail.com</a>
+                      <p className="text-white font-bold text-base flex items-center gap-2">
+                        <i className="fas fa-envelope text-[#00E5FF]"></i> Contact: <a href="mailto:novara.globalhealth@gmail.com" className="text-slate-400 font-medium hover:text-[#00E5FF] transition-colors">novara.globalhealth@gmail.com</a>
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-slate-900 font-bold mb-6 text-base">Platform</h4>
-                      <ul className="space-y-4 text-sm font-bold text-slate-700">
-                        <li><a href="#mission" className="hover:text-[#2962FF] transition-colors">Our Mission</a></li>
-                        <li><a href="#innovations" className="hover:text-[#2962FF] transition-colors">Digital Innovations</a></li>
-                        <li><a href="#leadership" className="hover:text-[#2962FF] transition-colors">Leadership</a></li>
+                      <h4 className="text-white font-bold mb-6 text-base">Platform</h4>
+                      <ul className="space-y-4 text-sm font-bold text-slate-400">
+                        <li><a href="#mission" className="hover:text-[#00E5FF] transition-colors">Our Mission</a></li>
+                        <li><a href="#innovations" className="hover:text-[#00E5FF] transition-colors">Digital Innovations</a></li>
+                        <li><a href="#leadership" className="hover:text-[#00E5FF] transition-colors">Leadership</a></li>
                       </ul>
                     </div>
 
                     <div>
-                      <h4 className="text-slate-900 font-bold mb-6 text-base">Legal</h4>
-                      <ul className="space-y-4 text-sm font-bold text-slate-700">
-                        <li><a href="#" className="hover:text-[#2962FF] transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" className="hover:text-[#2962FF] transition-colors">Terms of Service</a></li>
-                        <li><a href="#" className="hover:text-[#2962FF] transition-colors">Cookie Policy</a></li>
+                      <h4 className="text-white font-bold mb-6 text-base">Legal</h4>
+                      <ul className="space-y-4 text-sm font-bold text-slate-400">
+                        <li><a href="#" className="hover:text-[#00E5FF] transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" className="hover:text-[#00E5FF] transition-colors">Terms of Service</a></li>
+                        <li><a href="#" className="hover:text-[#00E5FF] transition-colors">Cookie Policy</a></li>
                       </ul>
                     </div>
 
                     <div>
-                      <h4 className="text-slate-900 font-bold mb-6 text-base">Connect With Us</h4>
+                      <h4 className="text-white font-bold mb-6 text-base">Connect With Us</h4>
                       <div className="flex flex-col gap-3">
-                        <a href="https://www.linkedin.com/company/novara-global-health/" target="_blank" className="bg-[#2A8B82] hover:bg-[#1f6b64] text-white rounded-lg px-6 py-3.5 text-sm font-bold transition-all shadow-sm flex items-center gap-4 w-full">
-                          <i className="fa-brands fa-linkedin text-xl"></i> LinkedIn
+                        <a href="https://www.linkedin.com/company/novara-global-health/" target="_blank" className="bg-slate-800 hover:bg-slate-700 text-white rounded-lg px-6 py-3.5 text-sm font-bold transition-all shadow-sm flex items-center gap-4 w-full border border-slate-700">
+                          <i className="fa-brands fa-linkedin text-xl text-[#00E5FF]"></i> LinkedIn
                         </a>
-                        <a href="#" className="bg-[#2A8B82] hover:bg-[#1f6b64] text-white rounded-lg px-6 py-3.5 text-sm font-bold transition-all shadow-sm flex items-center gap-4 w-full">
-                          <i className="fa-brands fa-x-twitter text-xl"></i> Twitter/X
+                        <a href="#" className="bg-slate-800 hover:bg-slate-700 text-white rounded-lg px-6 py-3.5 text-sm font-bold transition-all shadow-sm flex items-center gap-4 w-full border border-slate-700">
+                          <i className="fa-brands fa-x-twitter text-xl text-[#00E5FF]"></i> Twitter/X
                         </a>
-                        <a href="#" className="bg-[#2A8B82] hover:bg-[#1f6b64] text-white rounded-lg px-6 py-3.5 text-sm font-bold transition-all shadow-sm flex items-center gap-4 w-full">
-                          <i className="fa-brands fa-instagram text-xl"></i> Instagram
+                        <a href="#" className="bg-slate-800 hover:bg-slate-700 text-white rounded-lg px-6 py-3.5 text-sm font-bold transition-all shadow-sm flex items-center gap-4 w-full border border-slate-700">
+                          <i className="fa-brands fa-instagram text-xl text-[#00E5FF]"></i> Instagram
                         </a>
                       </div>
                     </div>
 
                     <div>
-                      <h4 className="text-slate-900 font-bold mb-6 text-base">Partner With Us</h4>
+                      <h4 className="text-white font-bold mb-6 text-base">Partner With Us</h4>
                       <form action="https://formspree.io/f/mykbvraq" method="POST" className="space-y-3">
-                        <input type="email" name="email" placeholder="Email Address" className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-sm text-slate-900 focus:ring-2 focus:ring-[#00E5FF] outline-none shadow-sm" required />
-                        <textarea name="message" placeholder="Your message" rows="3" className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-sm text-slate-900 focus:ring-2 focus:ring-[#00E5FF] outline-none shadow-sm resize-none" required></textarea>
+                        <input type="email" name="email" placeholder="Email Address" className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:ring-2 focus:ring-[#00E5FF] outline-none shadow-sm placeholder-slate-500" required />
+                        <textarea name="message" placeholder="Your message" rows="3" className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:ring-2 focus:ring-[#00E5FF] outline-none shadow-sm resize-none placeholder-slate-500" required></textarea>
                         <button type="submit" className="w-full bg-[#2962FF] hover:bg-[#1E40AF] text-white font-bold rounded-lg px-4 py-3.5 text-sm transition-all shadow-md flex items-center justify-center gap-2">
                           <i className="fas fa-envelope"></i> Send Message
                         </button>
@@ -619,10 +622,10 @@
                     </div>
                   </div>
                   
-                  <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-black text-slate-400 uppercase tracking-widest">
+                  <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-black text-slate-500 uppercase tracking-widest">
                     <p>© {new Date().getFullYear()} Novara Global Health. All rights reserved. | Kigali, Rwanda</p>
-                    <div className="flex items-center gap-2 text-teal-700 bg-teal-50 border border-teal-100 px-3 py-1.5 rounded-full">
-                      <div className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></div>
+                    <div className="flex items-center gap-2 text-[#00E5FF] bg-[#00E5FF]/10 border border-[#00E5FF]/20 px-3 py-1.5 rounded-full">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#00E5FF] animate-pulse"></div>
                       Operational
                     </div>
                   </div>
