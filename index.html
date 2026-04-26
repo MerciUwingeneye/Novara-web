@@ -263,24 +263,22 @@
             );
         };
 
-        // --- SMART VISUAL COMPONENT (Combines the Woman + The Interactive Phone) ---
+        // --- SMART VISUAL COMPONENT (Combines the Pexels Woman + The Interactive Phone) ---
         const MaternixVisual = () => {
             const [imgError, setImgError] = useState(false);
             return (
-                <div className="flex flex-col md:flex-row justify-center lg:justify-end relative items-center w-full mt-8 lg:mt-0">
+                <div className="flex flex-row justify-center lg:justify-end items-center w-full mt-12 lg:mt-0 relative">
                     
-                    {/* 1. The Woman from your LinkedIn Poster */}
+                    {/* 1. The Pexels Doctor Image */}
                     {!imgError && (
-                        <div className="hidden md:block w-64 lg:w-72 h-[500px] overflow-hidden relative z-0 md:-mr-12 rounded-[3rem]">
-                            {/* CSS Crop: Zooms in specifically on the woman pointing */}
+                        <div className="hidden md:block w-[300px] lg:w-[450px] relative z-0 -mr-16 lg:-mr-24 pointer-events-none transform translate-y-4">
+                            {/* The mix-blend-multiply makes her white background disappear so she blends cleanly! */}
                             <img 
-                                src="linkdin post novara.jpg" 
-                                alt="Doctor Pointing" 
-                                className="absolute w-[250%] max-w-none h-auto left-[-10%] top-[-20%]"
+                                src="pexels-tessy-agbonome-521343232-18252412 (1).jpg" 
+                                alt="Doctor Presenting Maternix" 
+                                className="w-full h-auto object-contain mix-blend-multiply"
                                 onError={() => setImgError(true)}
                             />
-                            {/* Gradient fade so she blends beautifully behind the digital phone */}
-                            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-50 to-transparent"></div>
                         </div>
                     )}
                     
