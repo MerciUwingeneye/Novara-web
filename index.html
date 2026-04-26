@@ -269,21 +269,31 @@
             return (
                 <div className="flex flex-row justify-center lg:justify-end items-center w-full mt-12 lg:mt-0 relative">
                     
+                    {/* Background glow blob to visually unite the woman and the phone */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-gradient-to-r from-[#00E5FF]/10 to-[#2962FF]/10 rounded-full blur-3xl -z-10"></div>
+                    
                     {/* 1. The Pexels Doctor Image */}
                     {!imgError && (
-                        <div className="hidden md:block w-[300px] lg:w-[450px] relative z-0 -mr-16 lg:-mr-24 pointer-events-none transform translate-y-4">
-                            {/* The mix-blend-multiply makes her white background disappear so she blends cleanly! */}
+                        <div 
+                            className="hidden md:block w-[300px] lg:w-[450px] relative z-0 -mr-12 lg:-mr-20 pointer-events-none transform translate-y-6"
+                            style={{ 
+                                /* This creates the smooth fade out at the bottom so it doesn't look cut off! */
+                                WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 15%)', 
+                                maskImage: 'linear-gradient(to top, transparent 0%, black 15%)' 
+                            }}
+                        >
+                            {/* We added -scale-x-100 to horizontally flip her so she points AT the phone! */}
                             <img 
                                 src="pexels-tessy-agbonome-521343232-18252412 (1).jpg" 
                                 alt="Doctor Presenting Maternix" 
-                                className="w-full h-auto object-contain mix-blend-multiply"
+                                className="w-full h-auto object-contain mix-blend-multiply -scale-x-100"
                                 onError={() => setImgError(true)}
                             />
                         </div>
                     )}
                     
                     {/* 2. The Interactive Digital Phone (Always Visible!) */}
-                    <div className="relative z-10 drop-shadow-2xl">
+                    <div className="relative z-10 drop-shadow-[0_25px_50px_rgba(0,0,0,0.25)]">
                         <MaternixPhone />
                     </div>
 
