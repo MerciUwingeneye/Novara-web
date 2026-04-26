@@ -263,44 +263,6 @@
             );
         };
 
-        // --- SMART VISUAL COMPONENT (Combines the LinkedIn Woman + The Interactive Phone) ---
-        const MaternixVisual = () => {
-            const [imgError, setImgError] = useState(false);
-            return (
-                <div className="flex flex-row justify-center lg:justify-end items-center w-full mt-12 lg:mt-0 relative">
-                    
-                    {/* Background glow blob to visually unite the woman and the phone */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-gradient-to-r from-[#00E5FF]/10 to-[#2962FF]/10 rounded-full blur-3xl -z-10"></div>
-                    
-                    {/* 1. The Cropped Doctor Image from LinkedIn Post */}
-                    {!imgError && (
-                        <div 
-                            className="hidden md:block w-[300px] lg:w-[350px] h-[550px] relative z-0 -mr-12 lg:-mr-20 pointer-events-none overflow-hidden"
-                            style={{ 
-                                /* This creates the smooth fade out at the bottom so it doesn't look cut off! */
-                                WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 15%)', 
-                                maskImage: 'linear-gradient(to top, transparent 0%, black 15%)' 
-                            }}
-                        >
-                            {/* CSS Crop: Zooms in 230% and shifts to isolate the woman, hiding captions and the static phone. mix-blend-multiply drops the white background! */}
-                            <img 
-                                src="linkdin post novara.jpg" 
-                                alt="Doctor Presenting Maternix" 
-                                className="absolute w-[230%] max-w-none h-auto left-[-15%] top-[-22%] mix-blend-multiply"
-                                onError={() => setImgError(true)}
-                            />
-                        </div>
-                    )}
-                    
-                    {/* 2. The Interactive Digital Phone (Always Visible!) */}
-                    <div className="relative z-10 drop-shadow-[0_25px_50px_rgba(0,0,0,0.25)]">
-                        <MaternixPhone />
-                    </div>
-
-                </div>
-            );
-        };
-
         const App = () => {
           const [isScrolled, setIsScrolled] = useState(false);
 
@@ -416,7 +378,7 @@
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-full">
                     <div className="flex flex-col items-center">
-                      <div className="text-4xl md:text-5xl font-black text-[#2962FF] mb-4 tracking-tight">287,000</div>
+                      <div className="text-3xl md:text-4xl font-black text-[#2962FF] mb-4 tracking-tight">287,000</div>
                       <div className="flex items-center gap-3 group">
                         <div className="w-8 h-8 shrink-0 rounded-full bg-[#00E5FF]/10 flex items-center justify-center text-[#008B99] shadow-sm group-hover:scale-110 transition-all">
                           <i className="fas fa-person-pregnant"></i>
@@ -425,7 +387,7 @@
                       </div>
                     </div>
                     <div className="flex flex-col items-center">
-                      <div className="text-4xl md:text-5xl font-black text-[#2962FF] mb-4 tracking-tight">2.3 Million</div>
+                      <div className="text-3xl md:text-4xl font-black text-[#2962FF] mb-4 tracking-tight">2.3 Million</div>
                       <div className="flex items-center gap-3 group">
                         <div className="w-8 h-8 shrink-0 rounded-full bg-[#00E5FF]/10 flex items-center justify-center text-[#008B99] shadow-sm group-hover:scale-110 transition-all">
                           <i className="fas fa-baby"></i>
@@ -434,7 +396,7 @@
                       </div>
                     </div>
                     <div className="flex flex-col items-center">
-                      <div className="text-4xl md:text-5xl font-black text-[#2962FF] mb-4 tracking-tight">47%</div>
+                      <div className="text-3xl md:text-4xl font-black text-[#2962FF] mb-4 tracking-tight">47%</div>
                       <div className="flex items-center gap-3 group">
                         <div className="w-8 h-8 shrink-0 rounded-full bg-[#00E5FF]/10 flex items-center justify-center text-[#008B99] shadow-sm group-hover:scale-110 transition-all">
                           <i className="fas fa-chart-pie"></i>
@@ -443,7 +405,7 @@
                       </div>
                     </div>
                     <div className="flex flex-col items-center">
-                      <div className="text-4xl md:text-5xl font-black text-[#2962FF] mb-4 tracking-tight">~95%</div>
+                      <div className="text-3xl md:text-4xl font-black text-[#2962FF] mb-4 tracking-tight">~95%</div>
                       <div className="flex items-center gap-3 group">
                         <div className="w-8 h-8 shrink-0 rounded-full bg-[#00E5FF]/10 flex items-center justify-center text-[#008B99] shadow-sm group-hover:scale-110 transition-all">
                           <i className="fas fa-earth-africa"></i>
@@ -540,8 +502,8 @@
                       </div>
                     </div>
                     
-                    <div className="flex justify-center lg:justify-end relative items-center w-full">
-                        <MaternixVisual />
+                    <div className="flex justify-center lg:justify-end relative items-center">
+                        <MaternixPhone />
                     </div>
                   </div>
 
