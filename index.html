@@ -263,6 +263,27 @@
             );
         };
 
+        // --- SMART VISUAL COMPONENT (Handles uploaded image fallback to code phone) ---
+        const MaternixVisual = () => {
+            const [imgError, setImgError] = useState(false);
+            return (
+                <div className="flex justify-center lg:justify-end relative items-center w-full">
+                    {!imgError ? (
+                        <div className="w-full max-w-md rounded-[2.5rem] shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-1 border-4 border-white overflow-hidden relative bg-slate-100">
+                            <img 
+                                src="pexels-tessy-agbonome-521343232-18252412 (1).jpg" 
+                                alt="Maternix App Preview" 
+                                className="w-full h-auto object-cover"
+                                onError={() => setImgError(true)}
+                            />
+                        </div>
+                    ) : (
+                        <MaternixPhone />
+                    )}
+                </div>
+            );
+        };
+
         const App = () => {
           const [isScrolled, setIsScrolled] = useState(false);
 
@@ -378,7 +399,7 @@
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-full">
                     <div className="flex flex-col items-center">
-                      <div className="text-3xl md:text-4xl font-black text-[#2962FF] mb-4 tracking-tight">287,000</div>
+                      <div className="text-4xl md:text-5xl font-black text-[#2962FF] mb-4 tracking-tight">287,000</div>
                       <div className="flex items-center gap-3 group">
                         <div className="w-8 h-8 shrink-0 rounded-full bg-[#00E5FF]/10 flex items-center justify-center text-[#008B99] shadow-sm group-hover:scale-110 transition-all">
                           <i className="fas fa-person-pregnant"></i>
@@ -387,7 +408,7 @@
                       </div>
                     </div>
                     <div className="flex flex-col items-center">
-                      <div className="text-3xl md:text-4xl font-black text-[#2962FF] mb-4 tracking-tight">2.3 Million</div>
+                      <div className="text-4xl md:text-5xl font-black text-[#2962FF] mb-4 tracking-tight">2.3 Million</div>
                       <div className="flex items-center gap-3 group">
                         <div className="w-8 h-8 shrink-0 rounded-full bg-[#00E5FF]/10 flex items-center justify-center text-[#008B99] shadow-sm group-hover:scale-110 transition-all">
                           <i className="fas fa-baby"></i>
@@ -396,7 +417,7 @@
                       </div>
                     </div>
                     <div className="flex flex-col items-center">
-                      <div className="text-3xl md:text-4xl font-black text-[#2962FF] mb-4 tracking-tight">47%</div>
+                      <div className="text-4xl md:text-5xl font-black text-[#2962FF] mb-4 tracking-tight">47%</div>
                       <div className="flex items-center gap-3 group">
                         <div className="w-8 h-8 shrink-0 rounded-full bg-[#00E5FF]/10 flex items-center justify-center text-[#008B99] shadow-sm group-hover:scale-110 transition-all">
                           <i className="fas fa-chart-pie"></i>
@@ -405,7 +426,7 @@
                       </div>
                     </div>
                     <div className="flex flex-col items-center">
-                      <div className="text-3xl md:text-4xl font-black text-[#2962FF] mb-4 tracking-tight">~95%</div>
+                      <div className="text-4xl md:text-5xl font-black text-[#2962FF] mb-4 tracking-tight">~95%</div>
                       <div className="flex items-center gap-3 group">
                         <div className="w-8 h-8 shrink-0 rounded-full bg-[#00E5FF]/10 flex items-center justify-center text-[#008B99] shadow-sm group-hover:scale-110 transition-all">
                           <i className="fas fa-earth-africa"></i>
@@ -502,8 +523,8 @@
                       </div>
                     </div>
                     
-                    <div className="flex justify-center lg:justify-end relative items-center">
-                        <MaternixPhone />
+                    <div className="flex justify-center lg:justify-end relative items-center w-full">
+                        <MaternixVisual />
                     </div>
                   </div>
 
