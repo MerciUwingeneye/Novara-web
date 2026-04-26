@@ -263,7 +263,7 @@
             );
         };
 
-        // --- SMART VISUAL COMPONENT (Combines the Pexels Woman + The Interactive Phone) ---
+        // --- SMART VISUAL COMPONENT (Combines the LinkedIn Woman + The Interactive Phone) ---
         const MaternixVisual = () => {
             const [imgError, setImgError] = useState(false);
             return (
@@ -272,21 +272,21 @@
                     {/* Background glow blob to visually unite the woman and the phone */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-gradient-to-r from-[#00E5FF]/10 to-[#2962FF]/10 rounded-full blur-3xl -z-10"></div>
                     
-                    {/* 1. The Pexels Doctor Image */}
+                    {/* 1. The Cropped Doctor Image from LinkedIn Post */}
                     {!imgError && (
                         <div 
-                            className="hidden md:block w-[300px] lg:w-[450px] relative z-0 -mr-12 lg:-mr-20 pointer-events-none transform translate-y-6"
+                            className="hidden md:block w-[300px] lg:w-[350px] h-[550px] relative z-0 -mr-12 lg:-mr-20 pointer-events-none overflow-hidden"
                             style={{ 
                                 /* This creates the smooth fade out at the bottom so it doesn't look cut off! */
                                 WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 15%)', 
                                 maskImage: 'linear-gradient(to top, transparent 0%, black 15%)' 
                             }}
                         >
-                            {/* We added -scale-x-100 to horizontally flip her so she points AT the phone! */}
+                            {/* CSS Crop: Zooms in 230% and shifts to isolate the woman, hiding captions and the static phone. mix-blend-multiply drops the white background! */}
                             <img 
-                                src="pexels-tessy-agbonome-521343232-18252412 (1).jpg" 
+                                src="linkdin post novara.jpg" 
                                 alt="Doctor Presenting Maternix" 
-                                className="w-full h-auto object-contain mix-blend-multiply -scale-x-100"
+                                className="absolute w-[230%] max-w-none h-auto left-[-15%] top-[-22%] mix-blend-multiply"
                                 onError={() => setImgError(true)}
                             />
                         </div>
