@@ -263,23 +263,32 @@
             );
         };
 
-        // --- SMART VISUAL COMPONENT (Handles uploaded image fallback to code phone) ---
+        // --- SMART VISUAL COMPONENT (Combines the Woman + The Interactive Phone) ---
         const MaternixVisual = () => {
             const [imgError, setImgError] = useState(false);
             return (
-                <div className="flex justify-center lg:justify-end relative items-center w-full">
-                    {!imgError ? (
-                        <div className="w-full max-w-md rounded-[2.5rem] shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-1 border-4 border-white overflow-hidden relative bg-slate-100">
+                <div className="flex flex-col md:flex-row justify-center lg:justify-end relative items-center w-full mt-8 lg:mt-0">
+                    
+                    {/* 1. The Woman from your LinkedIn Poster */}
+                    {!imgError && (
+                        <div className="hidden md:block w-64 lg:w-72 h-[500px] overflow-hidden relative z-0 md:-mr-12 rounded-[3rem]">
+                            {/* CSS Crop: Zooms in specifically on the woman pointing */}
                             <img 
-                                src="pexels-tessy-agbonome-521343232-18252412 (1).jpg" 
-                                alt="Maternix App Preview" 
-                                className="w-full h-auto object-cover"
+                                src="linkdin post novara.jpg" 
+                                alt="Doctor Pointing" 
+                                className="absolute w-[250%] max-w-none h-auto left-[-10%] top-[-20%]"
                                 onError={() => setImgError(true)}
                             />
+                            {/* Gradient fade so she blends beautifully behind the digital phone */}
+                            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-50 to-transparent"></div>
                         </div>
-                    ) : (
-                        <MaternixPhone />
                     )}
+                    
+                    {/* 2. The Interactive Digital Phone (Always Visible!) */}
+                    <div className="relative z-10 drop-shadow-2xl">
+                        <MaternixPhone />
+                    </div>
+
                 </div>
             );
         };
